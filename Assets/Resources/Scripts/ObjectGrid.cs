@@ -19,10 +19,15 @@ public class ObjectGrid : MonoBehaviour {
 	private Sprite[] objectGraphic; 
 	private Object item;
 	public bool randomObject = true;
-	public int objectNum = 9;
+	private int objectNum = 9;
 	public string itemName = "Ball";
 
 	private int toolSelected = 0; //default with add object
+	//0 = add
+	//1 = ruler
+	//2 = erase
+
+	public Measurer ruler;
 
 	// Use this for initialization
 	void Start () {
@@ -65,13 +70,14 @@ public class ObjectGrid : MonoBehaviour {
 
 		if (!float.IsNaN (pos.x)) {
 			GameObject spawn = (GameObject)Instantiate (item);
-			spawn.transform.position = new Vector3 (pos.x, pos.y, 0f);
+			spawn.transform.position = new Vector3 (pos.x, pos.y, -1f);
 			if (randomObject) {
 				int r = (int)Random.Range (0, objectNum);
 				spawn.GetComponent<SpriteRenderer> ().sprite = objectGraphic [r];
 			}
+			spawn.GetComponent<Item>().setCoods(matX,matY);
+			spawn.transform.parent = this.transform;
 		}
-
 	}
 
 	//temp
@@ -84,5 +90,23 @@ public class ObjectGrid : MonoBehaviour {
 
 	public void changeSelection(int type){
 		toolSelected = type;
+	}
+
+	public int getToolSelected(){
+		return toolSelected;
+	}
+
+	public void childClicked(int X, int Y){
+		if (toolSelected == 2) {
+			occupationMatrix[X,Y] = 0;
+		}
+	}
+
+	public void hideToMeasurer(){
+		ruler.hideLine ();
+	}
+
+	public void showToMeasurer(){
+		ruler.showLine ();
 	}
 }
