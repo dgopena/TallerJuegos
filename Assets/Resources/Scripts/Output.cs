@@ -11,6 +11,8 @@ public class Output : MonoBehaviour {
 	private bool active;
 
 	public float targetResult = 0;
+    public float result = 0;
+    public string nt = "";
 	// Use this for initialization
 	void Start () {
 		goButton = transform.FindChild("Out");
@@ -34,12 +36,16 @@ public class Output : MonoBehaviour {
 		else if(buttonType == 1){
 			outPanel.position += Vector3.up * 8f;
 			active = false;
-		}
+            result = 0;
+            nt = "";
+            outLabel.GetComponent<TextMesh>().text = nt;
+        }
 	}
 
-	public void receiveNumbers(int numType){
+	public void receiveNumbers(string numType){
 		if (active) {
-			
+            nt = numType;
+            outLabel.GetComponent<TextMesh>().text = numType;
 		}
 	}
 }

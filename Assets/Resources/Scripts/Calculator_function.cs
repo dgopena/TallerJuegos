@@ -33,6 +33,9 @@ public class Calculator_function : MonoBehaviour {
     private Text o_writer;
     private Text r_writer;
 
+    private Output op;
+    public GameObject output;
+
     void Start() {
         o_writer = transform.GetChild(20).GetChild(0).GetComponent<Text>(); 
         r_writer = transform.GetChild(20).GetChild(1).GetComponent<Text>();
@@ -40,6 +43,8 @@ public class Calculator_function : MonoBehaviour {
         o_writer.text = "";
         r_writer.text = "";
 
+        op = output.GetComponent<Output>();
+            
         hist = new string[10, 2];
                 
         state_num = new double[20, 2];
@@ -323,7 +328,7 @@ public class Calculator_function : MonoBehaviour {
             this.write_Result();
             this.save_in_history();
         }
-        if (no_alterable)
+        else if (no_alterable)
         {
             this.clear_operation();
             this.write_Operation();
@@ -509,5 +514,9 @@ public class Calculator_function : MonoBehaviour {
         r_writer.text = "";
     }
 
-    
+    public void send_number_to_output()
+    {
+        op.result = (float)num_1;
+        op.receiveNumbers(num1);
+    }
 }

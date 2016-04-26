@@ -46,19 +46,23 @@ public class calculator_button : MonoBehaviour {
 		rend.sprite = this.ButtonPressed;
         if (!is_action) { //es número
             calc.write_number(number);
+            calc.send_number_to_output();
         }
         else {//es_acción
             if(action_type == 0) {
                 calc.write_decimal_point();
+                calc.send_number_to_output();
             }
             if(action_type >=1 && action_type <= 4) {
                 calc.write_operation(action_type);
             }
             if (action_type == 5) {
                 calc.erease();
+                calc.send_number_to_output();
             }
             if (action_type == 6) {
                 calc.clear_operation();
+                calc.send_number_to_output();
             }
             if (action_type == 7)
             {
