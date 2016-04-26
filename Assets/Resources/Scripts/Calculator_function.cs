@@ -32,7 +32,6 @@ public class Calculator_function : MonoBehaviour {
 
     private Text o_writer;
     private Text r_writer;
-    
 
     void Start() {
         o_writer = transform.GetChild(20).GetChild(0).GetComponent<Text>(); 

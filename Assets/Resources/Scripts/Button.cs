@@ -6,8 +6,10 @@ public class Button : MonoBehaviour {
 	public int buttonType = 0; //0 = add object, 1 = measure, 2 = erase
 	private int numButtons = 3;
 	private Sprite[] buttonGraphic;
+	private Sprite[] outputGraphic;
 	private bool buttonActive = false; //starts inactive
 
+	public bool isOutputType = false; //2 = eliminate output panel, 0 = submit, 1 = cancel
 	
 	private SpriteRenderer rend;
 	// Use this for initialization
@@ -15,13 +17,21 @@ public class Button : MonoBehaviour {
 		rend = this.GetComponent<SpriteRenderer>();
 
 		buttonGraphic = new Sprite[numButtons * 2];
+		outputGraphic = new Sprite[4];
 
 		for (int i = 0; i<numButtons; i++) {
 			buttonGraphic[2*i] = Resources.Load<Sprite>("Sprites/button"+i+"_0") as Sprite; //def
 			buttonGraphic[(2*i)+1] = Resources.Load<Sprite>("Sprites/button"+i+"_1") as Sprite; //pressed
 		}
 
-		if (buttonType == 0) {
+		outputGraphic[0] = Resources.Load<Sprite>("Sprites/buttonOut0") as Sprite;
+		outputGraphic[1] = Resources.Load<Sprite>("Sprites/buttonOut1") as Sprite;
+		outputGraphic[2] = Resources.Load<Sprite>("Sprites/outCancel0") as Sprite;
+		outputGraphic[3] = Resources.Load<Sprite>("Sprites/outCancel1") as Sprite;
+
+
+
+		if (buttonType == 0 && !isOutputType) {
 			this.activate();
 		}
 	}
@@ -32,14 +42,27 @@ public class Button : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		if (!buttonActive) {
-			rend.sprite = buttonGraphic[buttonType*2 + 1];
-			buttonActive = true;
-			if (buttonType == 1) {
-				this.transform.parent.GetComponent<ObjectGrid>().showToMeasurer();
+		if (!isOutputType) {
+			if (!buttonActive) {
+				rend.sprite = buttonGraphic [buttonType * 2 + 1];
+				buttonActive = true;
+				if (buttonType == 1) {
+					this.transform.parent.GetComponent<ObjectGrid> ().showToMeasurer ();
+				}
+				disableBrothers ();
+				alertParent ();
 			}
-			disableBrothers();
-			alertParent();
+		} else {
+			if(buttonType != 2){
+				rend.sprite = outputGraphic [buttonType * 2 + 1];
+			}
+			transform.parent.GetComponent<Output>().buttonCall(buttonType);
+		}
+	}
+
+	void OnMouseUp(){
+		if (isOutputType && buttonType!= 2) {
+			rend.sprite = outputGraphic [buttonType * 2];
 		}
 	}
 

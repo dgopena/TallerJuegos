@@ -14,6 +14,12 @@ public class Measurer : MonoBehaviour {
 	private bool touchReleased = true;
 	private bool active = false;
 	private bool buttonClick = true; //descuenta el primer click al boton
+
+	//measuring limits (Box). Donde se puede tirar la linea y donde no
+	public float minHor = -5f;
+	public float maxHor = 5f;
+	public float minVer = -5f;
+	public float maxVer = 5f;
 	// Use this for initialization
 	void Start () {
 		lineLabel = this.transform.FindChild ("RulerLabel");
@@ -41,31 +47,39 @@ public class Measurer : MonoBehaviour {
 
 	void ClickOnScreen(){
 		if (active) {
-			if (float.IsNaN (lastPoint.x)) {
-				lastPoint = camera.ScreenToWorldPoint (Input.mousePosition); //Input.GetTouch(0).position;
-			} else {
-				newPoint = camera.ScreenToWorldPoint (Input.mousePosition);
+			Vector3 clickMade = camera.ScreenToWorldPoint (Input.mousePosition); //Input.GetTouch(0).position;
+			bool onBounds = ((clickMade.x >= minHor) && (clickMade.x <= maxHor)) && ((clickMade.y >= minVer)&&(clickMade.y <= maxVer));
+			if(onBounds){
+				if (float.IsNaN (lastPoint.x)) {
+					lastPoint = clickMade;
+				} else {
+					newPoint = clickMade;
 
-				float distance = (newPoint - lastPoint).magnitude;
-				Vector3 direction = (newPoint - lastPoint);
-				direction.Normalize ();
-				Vector3 midPoint = lastPoint + (direction * (distance / 2f));
-				lineDot.position = new Vector3(midPoint.x, midPoint.y, -1.2f);
-				lineDot.localScale = new Vector3(distance*5f, 1f, 1f);
+					float distance = (newPoint - lastPoint).magnitude;
+					Vector3 direction = (newPoint - lastPoint);
+					direction.Normalize ();
+					Vector3 midPoint = lastPoint + (direction * (distance / 2f));
+					lineDot.position = new Vector3(midPoint.x, midPoint.y, -1.2f);
+					lineDot.localScale = new Vector3(distance*5f, 1f, 1f);
 
-				if(direction.x == 0){
-					lineDot.rotation = Quaternion.Euler(Vector3.zero);
+					if(direction.x == 0){
+						lineDot.rotation = Quaternion.Euler(Vector3.zero);
+					}
+					else{
+						float angle = Mathf.Atan((direction.y/direction.x));
+						angle = (angle*180f)/Mathf.PI;
+						lineDot.rotation = Quaternion.Euler(new Vector3(0f,0f,angle));
+					}
+
+					float labelX = newPoint.x;
+					if(lastPoint.x > newPoint.x){
+						labelX = lastPoint.x;
+					}
+					lineLabel.position = new Vector3(labelX + 2f, midPoint.y, -1.3f);
+					lineLabel.GetComponent<TextMesh>().text = (Mathf.Round((distance*3.75f) * 100f)/100f) + " cms";
+
+					lastPoint = newPoint;
 				}
-				else{
-					float angle = Mathf.Atan((direction.y/direction.x));
-					angle = (angle*180f)/Mathf.PI;
-					lineDot.rotation = Quaternion.Euler(new Vector3(0f,0f,angle));
-				}
-
-				lineLabel.position = new Vector3(midPoint.x, midPoint.y, -1.3f);
-				lineLabel.GetComponent<TextMesh>().text = "" + distance;
-
-				lastPoint = newPoint;
 			}
 		}
 	}
