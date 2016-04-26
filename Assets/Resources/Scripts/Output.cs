@@ -29,17 +29,25 @@ public class Output : MonoBehaviour {
 	}
 
 	public void buttonCall(int buttonType){
-		if(buttonType == 2){
+		if (buttonType == 2) {
 			outPanel.position += Vector3.down * 8f;
 			active = true;
-		}
-		else if(buttonType == 1){
+		} else if (buttonType == 1) {
 			outPanel.position += Vector3.up * 8f;
 			active = false;
-            result = 0;
-            nt = "";
-            outLabel.GetComponent<TextMesh>().text = nt;
-        }
+			result = 0;
+			nt = "";
+			outLabel.GetComponent<TextMesh> ().text = nt;
+		} else if (buttonType == 0) {
+			if(result == targetResult){
+				Debug.Log("yes very gud");
+				//colocar evento de congratz y pasar de layout
+			}
+			else{
+				Debug.Log("nope");
+				//same
+			}
+		}
 	}
 
 	public void receiveNumbers(string numType){
