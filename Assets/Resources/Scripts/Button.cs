@@ -53,15 +53,24 @@ public class Button : MonoBehaviour {
 				alertParent ();
 			}
 		} else {
-			if(buttonType != 2){
+			if(buttonType != 2 && buttonType != 3){
 				rend.sprite = outputGraphic [buttonType * 2 + 1];
+			}
+			else if(buttonType == 3){
+				Animator anim = this.GetComponent<Animator>();
+				if(anim.GetBool("open")){
+					anim.SetBool("open", false);
+				}
+				else{
+					anim.SetBool("open", true);
+				}
 			}
 			transform.parent.GetComponent<Output>().buttonCall(buttonType);
 		}
 	}
 
 	void OnMouseUp(){
-		if (isOutputType && buttonType!= 2) {
+		if (isOutputType && (buttonType!= 2 && buttonType!= 3)) {
 			rend.sprite = outputGraphic [buttonType * 2];
 		}
 	}

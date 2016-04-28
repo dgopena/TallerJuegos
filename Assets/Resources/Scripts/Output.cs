@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class Output : MonoBehaviour {
 
@@ -46,15 +45,16 @@ public class Output : MonoBehaviour {
 			if(result == targetResult){
 				Debug.Log("yes very gud");
                 //colocar evento de congratz y pasar de layout
-                SceneManager.LoadScene(right_answer);
                 
+				Application.LoadLevel(right_answer);
 			}
 			else{
 				Debug.Log("nope");
-                SceneManager.LoadScene(right_answer);
-                //same
+                
+				Application.LoadLevel(wrong_answer);
             }
 		}
+
 	}
 
 	public void receiveNumbers(string numType){
