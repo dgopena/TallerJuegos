@@ -47,7 +47,13 @@ public class Measurer : MonoBehaviour {
 
 	void ClickOnScreen(){
 		if (active) {
-			Vector3 clickMade = camera.ScreenToWorldPoint (Input.mousePosition); //Input.GetTouch(0).position;
+			Vector3 clickMade = Vector3.zero; //Input.GetTouch(0).position;
+			if(Input.touchCount > 0){
+				clickMade = camera.ScreenToWorldPoint(Input.GetTouch(0).position);
+			}
+			else{
+				clickMade = camera.ScreenToWorldPoint (Input.mousePosition);
+			}
 			bool onBounds = ((clickMade.x >= minHor) && (clickMade.x <= maxHor)) && ((clickMade.y >= minVer)&&(clickMade.y <= maxVer));
 			if(onBounds){
 				if (float.IsNaN (lastPoint.x)) {

@@ -84,6 +84,9 @@ public class ObjectGrid : MonoBehaviour {
 	void OnMouseDown(){
 		if (toolSelected == 0) {
 			Vector3 poss = camera.ScreenToWorldPoint (Input.mousePosition);
+			if(Input.touchCount > 0){
+				poss = camera.ScreenToWorldPoint(Input.GetTouch(0).position);
+			}
 			add (poss.x, poss.y);
 		}
 	}
