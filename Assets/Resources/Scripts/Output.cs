@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Output : MonoBehaviour {
 
@@ -13,8 +14,11 @@ public class Output : MonoBehaviour {
 	public float targetResult = 0;
     public float result = 0;
     public string nt = "";
-	// Use this for initialization
-	void Start () {
+    public string right_answer = "";
+    public string wrong_answer = "";
+
+    // Use this for initialization
+    void Start () {
 		goButton = transform.FindChild("Out");
 		outLabel = transform.FindChild("outputLabel");
 		cancelButton = transform.FindChild("Cancel");
@@ -41,12 +45,15 @@ public class Output : MonoBehaviour {
 		} else if (buttonType == 0) {
 			if(result == targetResult){
 				Debug.Log("yes very gud");
-				//colocar evento de congratz y pasar de layout
+                //colocar evento de congratz y pasar de layout
+                SceneManager.LoadScene(right_answer);
+                
 			}
 			else{
 				Debug.Log("nope");
-				//same
-			}
+                SceneManager.LoadScene(right_answer);
+                //same
+            }
 		}
 	}
 
