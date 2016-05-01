@@ -3,14 +3,11 @@ using System.Collections;
 
 public class ObjectGrid : MonoBehaviour {
 
-	public int minX = -4;
-	public int minY = -5;
+	public int originVertical = -4;
+	public int originHorizontal = -5;
 
-	public float horizontalOffset = 1f;
-	public float verticalOffset = 3f;
-
-	public int lenX = 6;
-	public int lenY = 8;
+	public int lenHor = 6;
+	public int lenVer = 8;
 
 	private int[,] occupationMatrix;
 
@@ -31,9 +28,9 @@ public class ObjectGrid : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		occupationMatrix = new int[lenY,lenX];
-		for (int j = 0; j<lenY; j++) {
-			for(int i = 0; i<lenX; i++){
+		occupationMatrix = new int[lenVer,lenHor];
+		for (int j = 0; j<lenVer; j++) {
+			for(int i = 0; i<lenHor; i++){
 				occupationMatrix[j,i] = 0;
 			}
 		}
@@ -56,11 +53,11 @@ public class ObjectGrid : MonoBehaviour {
 
 		int coodX = (int) Mathf.Floor (X);
 		int coodY = (int) Mathf.Floor (Y);
-		int matY =(int) (coodX - minY);
-		int matX =(int) (coodY - minX);
+		int matY =(int) (coodX - originHorizontal);
+		int matX =(int) (coodY - originVertical);
 
 		if ((matX >= 0) && (matY >= 0)) {
-			if ((matY < lenX) && (matX < lenY)) {
+			if ((matY < lenHor) && (matX < lenVer)) {
 				if(occupationMatrix[matX,matY] == 0){
 					pos = new Vector2 (coodX + 0.5f, coodY + 0.5f);
 					occupationMatrix[matX,matY] = 1;
