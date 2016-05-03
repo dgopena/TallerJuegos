@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Output : MonoBehaviour {
 
@@ -16,6 +17,15 @@ public class Output : MonoBehaviour {
     public string right_answer = "";
     public string wrong_answer = "";
 
+    private int spaces;
+    private bool dp;
+    private int dn;
+
+    private float[] state_result;
+    private bool[] state_dp;
+    private int[] state_dn;
+    private string[] state_string;
+
     // Use this for initialization
     void Start () {
 		goButton = transform.FindChild("Out");
@@ -24,6 +34,18 @@ public class Output : MonoBehaviour {
 		outPanel = transform.FindChild("Panel");
 
 		active = false;
+
+        outLabel.GetComponent<TextMesh>().text = "";
+
+        spaces = 0;
+        dn = 0;
+        dp = false;
+
+        state_result = new float[12];
+        state_dp = new bool[12];
+        state_dn = new int[12];
+        state_string = new string[13];
+
 	}
 	
 	// Update is called once per frame
@@ -63,4 +85,66 @@ public class Output : MonoBehaviour {
             outLabel.GetComponent<TextMesh>().text = numType;
 		}
 	}
+
+    public void write_decimal_point()
+    {
+        if (spaces <= 13)
+        {
+                        
+            if (!dp)
+            {
+                spaces++;
+                nt = nt + ".";
+            }
+            dp = true;
+            state_string[spaces] = nt;
+            state_dp[spaces] = dp;
+        }
+        outLabel.GetComponent<TextMesh>().text = nt;
+    }
+
+    public void erease()
+    {
+        if (spaces > 0)
+        {
+            spaces--;
+
+            result = state_result[spaces];
+            dp = state_dp[spaces];
+            dn = state_dn[spaces];
+            nt = state_string[spaces];
+
+            outLabel.GetComponent<TextMesh>().text = nt;
+        }
+        
+    }
+
+    public void write_number(int num)
+    {
+        if (spaces <= 12)
+        {
+            if (!dp)
+            {
+                result = result * 10 + num;
+                nt = nt + num.ToString();
+                spaces++;
+                state_result[spaces] = result;
+                state_dp[spaces] = dp;
+                state_dn[spaces] = dn;
+                state_string[spaces] = nt;
+            }
+            else
+            {
+                dn++;
+                result = result + num / Mathf.Pow(10, dn);
+                nt = nt + num.ToString();
+                spaces++;
+                state_result[spaces] = result;
+                state_dp[spaces] = dp;
+                state_dn[spaces] = dn;
+                state_string[spaces] = nt;
+            }
+            outLabel.GetComponent<TextMesh>().text = nt;
+        }
+    }
 }

@@ -30,21 +30,18 @@ public class Calculator_function : MonoBehaviour {
     public int position_in_history = -1;
     public int operations_saved = 0;
 
-    private Text o_writer;
-    private Text r_writer;
+    private TextMesh o_writer;
+    private TextMesh r_writer;
 
     private Output op;
-    public GameObject output;
 
     void Start() {
-        o_writer = transform.GetChild(20).GetChild(0).GetComponent<Text>(); 
-        r_writer = transform.GetChild(20).GetChild(1).GetComponent<Text>();
+        o_writer = transform.GetChild(20).GetChild(0).GetComponent<TextMesh>(); 
+        r_writer = transform.GetChild(20).GetChild(1).GetComponent<TextMesh>();
 
         o_writer.text = "";
         r_writer.text = "";
-
-        op = output.GetComponent<Output>();
-            
+                            
         hist = new string[10, 2];
                 
         state_num = new double[20, 2];
@@ -73,7 +70,11 @@ public class Calculator_function : MonoBehaviour {
     }
 
     public void write_number(int num) {
-        browsing_history = false; position_in_history = -1;
+        if (browsing_history) {
+            r_writer.text = "";
+            browsing_history = false;
+            position_in_history = -1;
+        }
         if (no_alterable){ clear_operation(); r_writer.text = ""; }
         if (spaces <= 18) {
             if (!w2) {
@@ -159,7 +160,12 @@ public class Calculator_function : MonoBehaviour {
     }
 
     public void write_decimal_point() {
-        browsing_history = false; position_in_history = -1;
+        if (browsing_history)
+        {
+            r_writer.text = "";
+            browsing_history = false;
+            position_in_history = -1;
+        }
         if (spaces <= 19) {
             if (!w2) {
                 if (!dp_1) {
@@ -208,7 +214,12 @@ public class Calculator_function : MonoBehaviour {
     }
 
     public void write_operation(int op_t){
-        browsing_history = false; position_in_history = -1;
+        if (browsing_history)
+        {
+            r_writer.text = "";
+            browsing_history = false;
+            position_in_history = -1;
+        }
         if (spaces <= 19) {
             if (num_2 == 0) {
                 if (!w2) { spaces++; }
@@ -238,7 +249,12 @@ public class Calculator_function : MonoBehaviour {
     }
 
     public void clear_operation() {
-        browsing_history = false; position_in_history = -1;
+        if (browsing_history)
+        {
+            r_writer.text = "";
+            browsing_history = false;
+            position_in_history = -1;
+        }
         no_alterable = false;//0 - num_1; 2 - dec_1; 2 - num_2; 3 - dec_2
         spaces = 0;
         w2 = false;
@@ -276,7 +292,12 @@ public class Calculator_function : MonoBehaviour {
     }
 
     public void erease() {
-        browsing_history = false; position_in_history = -1;
+        if (browsing_history)
+        {
+            r_writer.text = "";
+            browsing_history = false;
+            position_in_history = -1;
+        }
         if (spaces > 0)
         {
             spaces--;
@@ -306,7 +327,12 @@ public class Calculator_function : MonoBehaviour {
 
     public void solve()
     {
-        browsing_history = false; position_in_history = -1;
+        if (browsing_history)
+        {
+            r_writer.text = "";
+            browsing_history = false;
+            position_in_history = -1;
+        }
         if (num_2 != 0 && !no_alterable)
         {
             if (op_tp - 1 == 0) {
@@ -506,6 +532,10 @@ public class Calculator_function : MonoBehaviour {
     private void write_Result()
     {
         string r_aux = result.ToString();
+        if ( r_aux.Length > 12)
+        {
+            r_aux = r_aux.Substring(0, 12);
+        }
         r_writer.text = r_aux;
     }
 
@@ -514,9 +544,5 @@ public class Calculator_function : MonoBehaviour {
         r_writer.text = "";
     }
 
-    public void send_number_to_output()
-    {
-        op.result = (float)num_1;
-        op.receiveNumbers(num1);
-    }
+    
 }
