@@ -65,7 +65,9 @@ public class Button : MonoBehaviour {
 					anim.SetBool("open", true);
 				}
 			}
-			transform.parent.GetComponent<Output>().buttonCall(buttonType);
+			if(buttonType!=3){
+				transform.parent.GetComponent<Output>().buttonCall(buttonType);
+			}
 		}
 	}
 
