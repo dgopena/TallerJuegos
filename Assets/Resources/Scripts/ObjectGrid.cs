@@ -16,7 +16,7 @@ public class ObjectGrid : MonoBehaviour {
 	private Sprite[] objectGraphic; 
 	private Object item;
 	public bool randomObject = true;
-	private int objectNum = 9;
+	public int objectNum = 9;
 	public string itemName = "Ball";
 
 	private int toolSelected = 0; //default with add object
@@ -38,7 +38,7 @@ public class ObjectGrid : MonoBehaviour {
 		//modificar esto para flexibilidad en entregas futuras
 		objectGraphic = new Sprite[objectNum];
 		for (int i = 0; i<objectNum; i++) {
-			objectGraphic[i] = Resources.Load<Sprite>("Sprites/ball" + i) as Sprite;
+			objectGraphic[i] = Resources.Load<Sprite>("Sprites/"+itemName + i) as Sprite;
 		}
 	}
 	
