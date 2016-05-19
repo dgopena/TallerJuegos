@@ -14,14 +14,14 @@ public class Log_writer : MonoBehaviour {
     private StreamWriter sw;
     public double time_in_seconds = 0;
     public string ua = "";
-
+    public string name_activity = "";
 
 	// Use this for initialization
 	void Start () {
 
         
         sw = new StreamWriter(txtdirection, continuar_log, Encoding.ASCII);
-        
+        write_event("Inicio de la actividad: " + name_activity);
     }
 	
 	// Update is called once per frame
