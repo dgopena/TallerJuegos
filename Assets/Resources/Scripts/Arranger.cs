@@ -42,12 +42,21 @@ public class Arranger : MonoBehaviour {
 		}
 		Debug.Log (groupTotal);
 		for (int i = 0; i<groupTotal; i++) {
+			//el resto mandarlo a la banca
 			Vector3 point = new Vector3(Random.Range(minHor,maxHor), Random.Range(minVer,maxVer),-2f);
+			if(i == groupTotal - 1 && (amount % groupNum) != 0f){
+				point = new Vector3(-6f, -5f, -2f);
+			}
 			for(int k = 0; k<groupNum; k++){
 				if((groupNum*i)+k < amount){
 					Transform soldier = squad[(groupNum*i)+k];
 					soldier.GetComponent<Troop>().setGoal(point.x, point.y);
-					soldier.GetComponent<Troop>().goToGoal();
+					if(i != groupTotal - 1){
+						soldier.GetComponent<Troop>().goToGoal(-1);
+					}
+					else{
+						soldier.GetComponent<Troop>().goToGoal(k);
+					}
 				}
 			}
 		}
