@@ -39,11 +39,14 @@ public class Troop : MonoBehaviour {
 		//Debug.Log("Goal: ("+goalPos.x+","+goalPos.y+")");
 	}
 
-	public void goToGoal(){
+	public void goToGoal(int k){
 		goingToGoal = true;
 		//randomizer de cercania
-		goalPos = new Vector3 (Random.Range (goalPos.x - randomEndFactor, goalPos.x + randomEndFactor), Random.Range (goalPos.y - randomEndFactor, goalPos.y + randomEndFactor), goalPos.z);
-
+		if (k == -1) {
+			goalPos = new Vector3 (Random.Range (goalPos.x - randomEndFactor, goalPos.x + randomEndFactor), Random.Range (goalPos.y - randomEndFactor, goalPos.y + randomEndFactor), goalPos.z);
+		} else {
+			goalPos += Vector3.right*k;
+		}
 		goalDir = goalPos - transform.position;
 		goalDir.Normalize ();
 		
