@@ -20,9 +20,16 @@ public class Measurer : MonoBehaviour {
 	public float maxHor = 5f;
 	public float minVer = -5f;
 	public float maxVer = 5f;
-	// Use this for initialization
-	void Start () {
-		lineLabel = this.transform.FindChild ("RulerLabel");
+    // Use this for initialization
+
+
+    public GameObject log;
+    private Log_writer lg;
+
+    void Start () {
+        lg = log.GetComponent<Log_writer>();
+
+        lineLabel = this.transform.FindChild ("RulerLabel");
 		lineDot = this.transform.FindChild ("RulerLine");
 		lastPoint = new Vector3(float.NaN, float.NaN, float.NaN);
 	}
@@ -83,6 +90,8 @@ public class Measurer : MonoBehaviour {
 					}
 					lineLabel.position = new Vector3(labelX + 2f, midPoint.y, -1.3f);
 					lineLabel.GetComponent<TextMesh>().text = (Mathf.Round((distance*3.75f) * 100f)/100f) + " cms";
+
+                    lg.write_event("Uso la regla para medir desde (" + lastPoint.x + "," + lastPoint.y + ") hasta (" + newPoint.x + "," + newPoint.y + ") y obtubo : " + lineLabel.GetComponent<TextMesh>().text);
 
 					lastPoint = newPoint;
 				}

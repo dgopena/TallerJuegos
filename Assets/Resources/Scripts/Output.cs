@@ -67,13 +67,17 @@ public class Output : MonoBehaviour {
 			if(result == targetResult){
 				Debug.Log("yes very gud");
                 //colocar evento de congratz y pasar de layout
-                
-				Application.LoadLevel(right_answer);
+
+                //log guarda accion
+
+                Application.LoadLevel(right_answer);
 			}
 			else{
 				Debug.Log("nope");
-                
-				Application.LoadLevel(wrong_answer);
+
+                //log guarda accion
+
+                Application.LoadLevel(wrong_answer);
             }
 		}
 
