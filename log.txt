@@ -1,0 +1,602 @@
+
+00:00:01 --> Inicio de la actividad: Desafio 1
+
+00:00:05 --> Coloco pelota en : 0 , 6
+
+00:00:05 --> Coloco pelota en : 1 , 6
+
+00:00:07 --> Borro pelota en : 0 , 6
+
+00:00:07 --> Borro pelota en : 1 , 6
+
+00:00:08 --> Coloco pelota en : 0 , 5
+
+00:00:09 --> Coloco pelota en : 2 , 6
+
+00:00:09 --> Coloco pelota en : 4 , 6
+
+00:00:11 --> Borro pelota en : 0 , 5
+
+00:00:12 --> Borro pelota en : 2 , 6
+
+00:00:12 --> Borro pelota en : 4 , 6
+
+00:00:14 --> Coloco pelota en : 0 , 7
+
+00:00:19 --> Uso la regla para medir desde (-4.892008,3.509719) hasta (-4.11447,3.531318) y obtubo : 2.92 cms
+
+00:00:26 --> Uso la regla para medir desde (-4.11447,3.531318) hasta (-5.086392,3.552916) y obtubo : 3.65 cms
+
+00:00:28 --> Uso la regla para medir desde (-5.086392,3.552916) hasta (1.133909,3.704104) y obtubo : 23.33 cms
+
+00:00:35 --> Realizo la siguiente operacion : 24 / 3 = 8
+
+00:00:40 --> Uso la regla para medir desde (1.133909,3.704104) hasta (-4.546436,4.071274) y obtubo : 21.35 cms
+
+00:00:42 --> Uso la regla para medir desde (-4.546436,4.071274) hasta (-4.74082,-4.028078) y obtubo : 30.38 cms
+
+00:00:52 --> Realizo la siguiente operacion : 30 / 3 = 10
+
+00:00:59 --> Uso la regla para medir desde (-4.74082,-4.028078) hasta (-5.12959,3.531318) y obtubo : 28.39 cms
+
+00:01:00 --> Uso la regla para medir desde (-5.12959,3.531318) hasta (-3.984881,3.380129) y obtubo : 4.33 cms
+
+00:01:03 --> Coloco pelota en : 1 , 7
+
+00:01:05 --> Coloco pelota en : 2 , 7
+
+00:01:05 --> Coloco pelota en : 3 , 7
+
+00:01:06 --> Coloco pelota en : 4 , 7
+
+00:01:07 --> Coloco pelota en : 5 , 7
+
+00:01:12 --> Uso la regla para medir desde (-4.913607,3.531318) hasta (0.9179265,3.574514) y obtubo : 21.87 cms
+
+00:01:16 --> Uso la regla para medir desde (0.9179265,3.574514) hasta (-4.892008,3.444924) y obtubo : 21.79 cms
+
+00:01:18 --> Uso la regla para medir desde (-4.892008,3.444924) hasta (-4.028078,3.444924) y obtubo : 3.24 cms
+
+00:01:33 --> Uso la regla para medir desde (-4.028078,3.444924) hasta (-4.892008,3.488121) y obtubo : 3.24 cms
+
+00:01:35 --> Uso la regla para medir desde (-4.892008,3.488121) hasta (0.8963285,3.466523) y obtubo : 21.71 cms
+
+00:01:45 --> Uso la regla para medir desde (0.8963285,3.466523) hasta (-4.913607,3.444924) y obtubo : 21.79 cms
+
+00:01:46 --> Uso la regla para medir desde (-4.913607,3.444924) hasta (-4.071274,3.444924) y obtubo : 3.16 cms
+
+00:01:52 --> Realizo la siguiente operacion : 21.7 / 3.16 = 6.86708860759494
+
+00:02:11 --> Uso la regla para medir desde (-4.071274,3.444924) hasta (-4.546436,3.941685) y obtubo : 2.58 cms
+
+00:02:12 --> Uso la regla para medir desde (-4.546436,3.941685) hasta (-4.546436,3.012959) y obtubo : 3.48 cms
+
+00:02:13 --> Uso la regla para medir desde (-4.546436,3.012959) hasta (-4.546436,3.012959) y obtubo : 0 cms
+
+00:02:15 --> Uso la regla para medir desde (-4.546436,3.012959) hasta (-4.524837,3.898488) y obtubo : 3.32 cms
+
+00:02:16 --> Uso la regla para medir desde (-4.524837,3.898488) hasta (-4.438445,2.75378) y obtubo : 4.3 cms
+
+00:02:17 --> Uso la regla para medir desde (-4.438445,2.75378) hasta (-4.676025,-4.049676) y obtubo : 25.53 cms
+
+00:02:20 --> Uso la regla para medir desde (-4.676025,-4.049676) hasta (-4.546436,3.941685) y obtubo : 29.97 cms
+
+00:02:29 --> Uso la regla para medir desde (-4.546436,3.941685) hasta (-5.043196,3.466523) y obtubo : 2.58 cms
+
+00:02:30 --> Uso la regla para medir desde (-5.043196,3.466523) hasta (-3.963282,3.423326) y obtubo : 4.05 cms
+
+00:02:37 --> Realizo la siguiente operacion : 30 / 4 = 7.5
+
+00:02:43 --> Uso la regla para medir desde (-3.963282,3.423326) hasta (-4.524837,3.941685) y obtubo : 2.87 cms
+
+00:02:45 --> Uso la regla para medir desde (-4.524837,3.941685) hasta (-4.568034,3.056155) y obtubo : 3.32 cms
+
+00:02:52 --> Coloco pelota en : 0 , 6
+
+00:02:52 --> Coloco pelota en : 0 , 5
+
+00:02:53 --> Coloco pelota en : 0 , 4
+
+00:02:53 --> Coloco pelota en : 0 , 3
+
+00:02:53 --> Coloco pelota en : 0 , 2
+
+00:02:54 --> Coloco pelota en : 0 , 1
+
+00:02:55 --> Coloco pelota en : 0 , 0
+
+00:02:57 --> Borro pelota en : 0 , 4
+
+00:02:59 --> Borro pelota en : 0 , 3
+
+00:02:59 --> Borro pelota en : 0 , 5
+
+00:02:59 --> Borro pelota en : 0 , 6
+
+00:03:00 --> Borro pelota en : 0 , 2
+
+00:03:00 --> Borro pelota en : 0 , 1
+
+00:03:01 --> Borro pelota en : 1 , 7
+
+00:03:02 --> Borro pelota en : 2 , 7
+
+00:03:02 --> Borro pelota en : 3 , 7
+
+00:03:02 --> Borro pelota en : 4 , 7
+
+00:03:04 --> Coloco pelota en : 5 , 0
+
+00:03:09 --> Uso la regla para medir desde (-4.956803,3.552916) hasta (0.8963285,3.466523) y obtubo : 21.95 cms
+
+00:03:16 --> Uso la regla para medir desde (0.8963285,3.466523) hasta (-4.524837,3.963283) y obtubo : 20.41 cms
+
+00:03:19 --> Uso la regla para medir desde (-4.524837,3.963283) hasta (-4.481641,-3.920086) y obtubo : 29.56 cms
+
+00:03:26 --> Realizo la siguiente operacion : 22 * 30 = 660
+
+00:03:34 --> Uso la regla para medir desde (-4.481641,-3.920086) hasta (-4.956803,3.488121) y obtubo : 27.84 cms
+
+00:03:35 --> Uso la regla para medir desde (-4.956803,3.488121) hasta (-3.984881,3.401728) y obtubo : 3.66 cms
+
+00:03:38 --> Uso la regla para medir desde (-3.984881,3.401728) hasta (-4.524837,3.941685) y obtubo : 2.86 cms
+
+00:03:39 --> Uso la regla para medir desde (-4.524837,3.941685) hasta (-4.524837,3.185745) y obtubo : 2.83 cms
+
+00:03:44 --> Realizo la siguiente operacion : 4 * 4 = 16
+
+00:03:49 --> Realizo la siguiente operacion : 660 / 16 = 41.25
+
+00:03:56 --> Uso la regla para medir desde (-4.524837,3.185745) hasta (-4.524837,3.963283) y obtubo : 2.92 cms
+
+00:03:57 --> Uso la regla para medir desde (-4.524837,3.963283) hasta (-4.416846,3.099352) y obtubo : 3.26 cms
+
+00:03:59 --> Uso la regla para medir desde (-4.416846,3.099352) hasta (-4.827213,3.401728) y obtubo : 1.91 cms
+
+00:04:00 --> Uso la regla para medir desde (-4.827213,3.401728) hasta (-4.524837,3.898488) y obtubo : 2.18 cms
+
+00:04:01 --> Uso la regla para medir desde (-4.524837,3.898488) hasta (-4.136068,3.552916) y obtubo : 1.95 cms
+
+00:04:02 --> Uso la regla para medir desde (-4.136068,3.552916) hasta (-4.028078,1.479481) y obtubo : 7.79 cms
+
+00:04:02 --> Uso la regla para medir desde (-4.028078,1.479481) hasta (-3.725701,0.2699786) y obtubo : 4.68 cms
+
+00:04:05 --> Uso la regla para medir desde (-3.725701,0.2699786) hasta (-4.503239,3.898488) y obtubo : 13.92 cms
+
+00:04:06 --> Uso la regla para medir desde (-4.503239,3.898488) hasta (-4.546436,3.077754) y obtubo : 3.08 cms
+
+00:04:20 --> Realizo la siguiente operacion : 660 / 9 = 73.3333333333333
+
+00:04:28 --> Realizo la siguiente operacion : 660 / 48 = 13.75
+
+00:04:40 --> Realizo la siguiente operacion : 3.6 * 3.6 = 12.96
+
+00:04:47 --> Realizo la siguiente operacion : 3.7 * 3.7 = 13.69
+
+00:04:57 --> Realizo la siguiente operacion : 660 / 13.7 = 48.1751824817518
+
+00:05:00 --> Se ingreso 48 como respuesta. La respuesta correcta es: 48
+
+00:05:00 --> Inicio de la actividad: Desafio 2a
+
+00:05:04 --> Coloco pelota en : 1 , 5
+
+00:05:04 --> Coloco pelota en : 0 , 5
+
+00:05:05 --> Coloco pelota en : 1 , 6
+
+00:05:05 --> Coloco pelota en : 0 , 7
+
+00:05:06 --> Coloco pelota en : 0 , 6
+
+00:05:06 --> Coloco pelota en : 1 , 7
+
+00:05:06 --> Coloco pelota en : 0 , 4
+
+00:05:07 --> Coloco pelota en : 1 , 4
+
+00:05:07 --> Coloco pelota en : 0 , 3
+
+00:05:08 --> Coloco pelota en : 1 , 2
+
+00:05:08 --> Coloco pelota en : 1 , 3
+
+00:05:09 --> Coloco pelota en : 0 , 2
+
+00:05:09 --> Coloco pelota en : 0 , 0
+
+00:05:09 --> Coloco pelota en : 1 , 0
+
+00:05:10 --> Coloco pelota en : 0 , 1
+
+00:05:10 --> Coloco pelota en : 1 , 1
+
+00:05:11 --> Coloco pelota en : 3 , 0
+
+00:05:11 --> Coloco pelota en : 2 , 1
+
+00:05:12 --> Coloco pelota en : 2 , 0
+
+00:05:13 --> Coloco pelota en : 3 , 1
+
+00:05:13 --> Coloco pelota en : 3 , 2
+
+00:05:13 --> Coloco pelota en : 2 , 2
+
+00:05:14 --> Coloco pelota en : 2 , 3
+
+00:05:14 --> Coloco pelota en : 3 , 3
+
+00:05:15 --> Coloco pelota en : 2 , 4
+
+00:05:15 --> Coloco pelota en : 2 , 5
+
+00:05:16 --> Coloco pelota en : 2 , 6
+
+00:05:16 --> Coloco pelota en : 2 , 7
+
+00:05:19 --> Coloco pelota en : 3 , 7
+
+00:05:19 --> Coloco pelota en : 3 , 6
+
+00:05:20 --> Coloco pelota en : 3 , 4
+
+00:05:21 --> Coloco pelota en : 3 , 5
+
+00:05:22 --> Coloco pelota en : 4 , 7
+
+00:05:22 --> Coloco pelota en : 4 , 6
+
+00:05:22 --> Coloco pelota en : 4 , 5
+
+00:05:23 --> Coloco pelota en : 4 , 3
+
+00:05:23 --> Coloco pelota en : 4 , 2
+
+00:05:23 --> Coloco pelota en : 4 , 0
+
+00:05:24 --> Coloco pelota en : 4 , 1
+
+00:05:25 --> Coloco pelota en : 4 , 4
+
+00:05:25 --> Coloco pelota en : 5 , 4
+
+00:05:25 --> Coloco pelota en : 6 , 4
+
+00:05:26 --> Coloco pelota en : 7 , 4
+
+00:05:26 --> Coloco pelota en : 5 , 3
+
+00:05:26 --> Coloco pelota en : 6 , 3
+
+00:05:27 --> Coloco pelota en : 7 , 3
+
+00:05:27 --> Coloco pelota en : 5 , 2
+
+00:05:28 --> Coloco pelota en : 6 , 2
+
+00:05:28 --> Coloco pelota en : 7 , 2
+
+00:05:28 --> Coloco pelota en : 5 , 1
+
+00:05:29 --> Coloco pelota en : 6 , 1
+
+00:05:29 --> Coloco pelota en : 7 , 1
+
+00:05:30 --> Coloco pelota en : 5 , 0
+
+00:05:30 --> Coloco pelota en : 6 , 0
+
+00:05:30 --> Coloco pelota en : 7 , 0
+
+00:05:31 --> Coloco pelota en : 5 , 5
+
+00:05:31 --> Coloco pelota en : 6 , 5
+
+00:05:31 --> Coloco pelota en : 7 , 5
+
+00:05:32 --> Coloco pelota en : 5 , 6
+
+00:05:32 --> Coloco pelota en : 6 , 6
+
+00:05:32 --> Coloco pelota en : 7 , 6
+
+00:05:33 --> Coloco pelota en : 7 , 7
+
+00:05:33 --> Coloco pelota en : 6 , 7
+
+00:05:34 --> Coloco pelota en : 5 , 7
+
+00:05:37 --> Borro pelota en : 0 , 4
+
+00:05:37 --> Borro pelota en : 1 , 4
+
+00:05:38 --> Borro pelota en : 2 , 5
+
+00:05:38 --> Borro pelota en : 2 , 4
+
+00:05:39 --> Borro pelota en : 2 , 3
+
+00:00:01 --> Inicio de la actividad: Desafio 2a
+
+00:00:01 --> Inicio de la actividad: Desafio 2a
+
+00:00:01 --> Inicio de la actividad: Desafio 2a
+
+00:00:01 --> Inicio de la actividad: Desafio 2a
+
+00:00:01 --> Inicio de la actividad: Desafio 2b
+
+00:00:01 --> Inicio de la actividad: Desafio 2b
+
+00:00:01 --> Inicio de la actividad: Desafio 2a
+
+00:00:03 --> Coloco objeto en : 0 , 7
+
+00:00:04 --> Coloco objeto en : 1 , 7
+
+00:00:05 --> Coloco objeto en : 2 , 7
+
+00:00:05 --> Coloco objeto en : 3 , 7
+
+00:00:06 --> Coloco objeto en : 4 , 7
+
+00:00:07 --> Coloco objeto en : 5 , 7
+
+00:00:07 --> Coloco objeto en : 6 , 7
+
+00:00:08 --> Coloco objeto en : 7 , 7
+
+00:00:09 --> Coloco objeto en : 0 , 6
+
+00:00:10 --> Coloco objeto en : 0 , 5
+
+00:00:10 --> Coloco objeto en : 0 , 4
+
+00:00:11 --> Coloco objeto en : 0 , 3
+
+00:00:11 --> Coloco objeto en : 0 , 2
+
+00:00:12 --> Coloco objeto en : 0 , 1
+
+00:00:12 --> Coloco objeto en : 0 , 0
+
+00:00:18 --> Realizo la siguiente operacion : 7 * 8 = 56
+
+00:00:21 --> Se ingreso 56 como respuesta. La respuesta correcta es: 30
+
+00:00:01 --> Inicio de la actividad: Desafio 2b
+
+00:00:02 --> Coloco objeto en : 0 , 7
+
+00:00:03 --> Coloco objeto en : 1 , 7
+
+00:00:03 --> Coloco objeto en : 2 , 7
+
+00:00:04 --> Coloco objeto en : 3 , 7
+
+00:00:05 --> Coloco objeto en : 4 , 7
+
+00:00:05 --> Coloco objeto en : 5 , 7
+
+00:00:07 --> Coloco objeto en : 5 , 6
+
+00:00:07 --> Coloco objeto en : 5 , 5
+
+00:00:08 --> Coloco objeto en : 5 , 4
+
+00:00:08 --> Coloco objeto en : 5 , 3
+
+00:00:09 --> Coloco objeto en : 5 , 2
+
+00:00:10 --> Coloco objeto en : 5 , 1
+
+00:00:11 --> Coloco objeto en : 5 , 0
+
+00:00:18 --> Realizo la siguiente operacion : 7 * 8 = 56
+
+00:00:01 --> Inicio de la actividad: 
+
+00:00:01 --> Inicio de la actividad: 
+
+00:00:01 --> Inicio de la actividad: 
+
+00:00:02 --> Coloco objeto en : 1 , 7
+
+00:00:03 --> Coloco objeto en : 2 , 7
+
+00:00:03 --> Coloco objeto en : 3 , 7
+
+00:00:04 --> Coloco objeto en : 4 , 7
+
+00:00:04 --> Coloco objeto en : 5 , 7
+
+00:00:06 --> Coloco objeto en : 1 , 6
+
+00:00:06 --> Coloco objeto en : 1 , 5
+
+00:00:06 --> Coloco objeto en : 1 , 4
+
+00:00:07 --> Coloco objeto en : 1 , 3
+
+00:00:02 --> Inicio de la actividad: Desafio 4
+
+00:00:03 --> Coloco objeto en : 0 , 6
+
+00:00:04 --> Coloco objeto en : 1 , 6
+
+00:00:04 --> Coloco objeto en : 0 , 7
+
+00:00:05 --> Coloco objeto en : 1 , 7
+
+00:00:06 --> Coloco objeto en : 2 , 7
+
+00:00:07 --> Coloco objeto en : 3 , 7
+
+00:00:07 --> Coloco objeto en : 4 , 7
+
+00:00:08 --> Coloco objeto en : 5 , 7
+
+00:00:08 --> Coloco objeto en : 6 , 7
+
+00:00:09 --> Coloco objeto en : 0 , 5
+
+00:00:09 --> Coloco objeto en : 0 , 4
+
+00:00:10 --> Coloco objeto en : 0 , 3
+
+00:00:10 --> Coloco objeto en : 0 , 2
+
+00:00:11 --> Coloco objeto en : 0 , 1
+
+00:00:11 --> Coloco objeto en : 0 , 0
+
+00:00:01 --> Inicio de la actividad: Desafio 2a
+
+00:00:01 --> Inicio de la actividad: 
+
+00:00:02 --> Coloco objeto en : 0 , 8
+
+00:00:02 --> Coloco objeto en : 1 , 8
+
+00:00:03 --> Coloco objeto en : 2 , 8
+
+00:00:04 --> Coloco objeto en : 3 , 8
+
+00:00:04 --> Coloco objeto en : 4 , 8
+
+00:00:06 --> Coloco objeto en : 5 , 8
+
+00:00:06 --> Coloco objeto en : 6 , 8
+
+00:00:07 --> Coloco objeto en : 0 , 7
+
+00:00:08 --> Coloco objeto en : 0 , 6
+
+00:00:08 --> Coloco objeto en : 0 , 5
+
+00:00:09 --> Coloco objeto en : 0 , 4
+
+00:00:09 --> Coloco objeto en : 0 , 3
+
+00:00:10 --> Coloco objeto en : 0 , 2
+
+00:00:10 --> Coloco objeto en : 0 , 1
+
+00:00:10 --> Coloco objeto en : 0 , 0
+
+00:00:11 --> Coloco objeto en : 1 , 0
+
+00:00:12 --> Coloco objeto en : 2 , 0
+
+00:00:12 --> Coloco objeto en : 3 , 0
+
+00:00:13 --> Coloco objeto en : 4 , 0
+
+00:00:13 --> Coloco objeto en : 6 , 0
+
+00:00:13 --> Coloco objeto en : 5 , 0
+
+00:00:14 --> Coloco objeto en : 6 , 1
+
+00:00:14 --> Coloco objeto en : 5 , 1
+
+00:00:14 --> Coloco objeto en : 4 , 1
+
+00:00:15 --> Coloco objeto en : 2 , 1
+
+00:00:15 --> Coloco objeto en : 2 , 3
+
+00:00:15 --> Coloco objeto en : 3 , 4
+
+00:00:01 --> Inicio de la actividad: Desafio 3a
+
+00:00:01 --> Inicio de la actividad: Desafio 3a
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 2 , 3
+
+00:00:02 --> Coloco objeto en : 1 , 4
+
+00:00:05 --> Coloco objeto en : 1 , 3
+
+00:00:05 --> Coloco objeto en : 3 , 3
+
+00:00:06 --> Coloco objeto en : 4 , 3
+
+00:00:06 --> Coloco objeto en : 5 , 3
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 1 , 3
+
+00:00:03 --> Coloco objeto en : 2 , 3
+
+00:00:03 --> Coloco objeto en : 3 , 3
+
+00:00:03 --> Coloco objeto en : 4 , 3
+
+00:00:04 --> Coloco objeto en : 5 , 3
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:04 --> Coloco objeto en : 1 , 2
+
+00:00:05 --> Coloco objeto en : 1 , 3
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 1 , 2
+
+00:00:02 --> Coloco objeto en : 1 , 3
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:01 --> Coloco objeto en : 1 , 3
+
+00:00:02 --> Coloco objeto en : 1 , 4
+
+00:00:02 --> Coloco objeto en : 1 , 5
+
+00:00:03 --> Coloco objeto en : 1 , 6
+
+00:00:03 --> Coloco objeto en : 1 , 7
+
+00:00:05 --> Coloco objeto en : 2 , 3
+
+00:00:07 --> Coloco objeto en : 2 , 4
+
+00:00:07 --> Coloco objeto en : 2 , 5
+
+00:00:08 --> Coloco objeto en : 2 , 6
+
+00:00:08 --> Coloco objeto en : 2 , 7
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 2 , 3
+
+00:00:02 --> Coloco objeto en : 1 , 3
+
+00:00:03 --> Coloco objeto en : 1 , 4
+
+00:00:03 --> Coloco objeto en : 2 , 5
+
+00:00:04 --> Coloco objeto en : 1 , 6
+
+00:00:04 --> Coloco objeto en : 1 , 5
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 1 , 7
+
+00:00:02 --> Coloco objeto en : 1 , 6
+
+00:00:03 --> Coloco objeto en : 1 , 5
+
+00:00:03 --> Coloco objeto en : 1 , 4
+
+00:00:03 --> Coloco objeto en : 1 , 3

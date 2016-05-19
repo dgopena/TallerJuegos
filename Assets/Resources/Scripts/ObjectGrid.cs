@@ -81,7 +81,7 @@ public class ObjectGrid : MonoBehaviour {
 			spawn.transform.parent = this.transform;
 
             //log guarda accion
-            lg.write_event("Coloco pelota en : "+matY + " , " + matX);
+            lg.write_event("Coloco objeto en : "+matY + " , " + matX);
 
         }
     }

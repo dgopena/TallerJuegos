@@ -27,8 +27,14 @@ public class Output : MonoBehaviour {
     private string[] state_string;
 
     // Use this for initialization
+
+    public GameObject log;
+    private Log_writer lg;
+
     void Start () {
-		goButton = transform.FindChild("Out");
+        lg = log.GetComponent<Log_writer>();
+
+        goButton = transform.FindChild("Out");
 		outLabel = transform.FindChild("outputLabel");
 		cancelButton = transform.FindChild("Cancel");
 		outPanel = transform.FindChild("Panel");
@@ -69,14 +75,16 @@ public class Output : MonoBehaviour {
                 //colocar evento de congratz y pasar de layout
 
                 //log guarda accion
-
+                lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
+                lg.write_event("----------------------------------------------------------------");
                 Application.LoadLevel(right_answer);
 			}
 			else{
 				Debug.Log("nope");
 
                 //log guarda accion
-
+                lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
+                lg.write_event("----------------------------------------------------------------");
                 Application.LoadLevel(wrong_answer);
             }
 		}
