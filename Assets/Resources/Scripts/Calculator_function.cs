@@ -33,9 +33,12 @@ public class Calculator_function : MonoBehaviour {
     private TextMesh o_writer;
     private TextMesh r_writer;
 
-    private Output op;
+    public GameObject log;
+    private Log_writer lg;
 
     void Start() {
+        lg = log.GetComponent<Log_writer>();
+
         o_writer = transform.GetChild(20).GetChild(0).GetComponent<TextMesh>(); 
         r_writer = transform.GetChild(20).GetChild(1).GetComponent<TextMesh>();
 
@@ -337,22 +340,28 @@ public class Calculator_function : MonoBehaviour {
         {
             if (op_tp - 1 == 0) {
                 result = num_1 + num_2;
+                lg.write_event("Realizo la siguiente operacion : "+num1 + " + " + num2 + " = " + result);
                 no_alterable = true;
             }
             else if (op_tp - 1 == 1) {
                 result = num_1 - num_2;
+                lg.write_event("Realizo la siguiente operacion : " + num1 + " - " + num2 + " = " + result);
                 no_alterable = true;
             }
             else if (op_tp - 1 == 2) {
                 result = num_1 * num_2;
+                lg.write_event("Realizo la siguiente operacion : " + num1 + " * " + num2 + " = " + result);
                 no_alterable = true;
             }
             else if (op_tp - 1 == 3) {
                 result = num_1 / num_2;
+                lg.write_event("Realizo la siguiente operacion : " + num1 + " / " + num2 + " = " + result);
                 no_alterable = true;
             }
             this.write_Result();
             this.save_in_history();
+            //log guarda accion
+            
         }
         else if (no_alterable)
         {

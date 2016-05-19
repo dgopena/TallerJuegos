@@ -1,0 +1,2 @@
+
+00:00:05 --> Realizo la siguiente operacion : 6 + 6 = 12

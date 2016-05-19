@@ -26,9 +26,14 @@ public class ObjectGrid : MonoBehaviour {
 
 	public Measurer ruler;
 
-	// Use this for initialization
-	void Start () {
-		occupationMatrix = new int[lenVer,lenHor];
+    public GameObject log;
+    private Log_writer lg;
+
+    // Use this for initialization
+    void Start () {
+        lg = log.GetComponent<Log_writer>();
+
+        occupationMatrix = new int[lenVer,lenHor];
 		for (int j = 0; j<lenVer; j++) {
 			for(int i = 0; i<lenHor; i++){
 				occupationMatrix[j,i] = 0;
@@ -74,8 +79,12 @@ public class ObjectGrid : MonoBehaviour {
 			}
 			spawn.GetComponent<Item>().setCoods(matX,matY);
 			spawn.transform.parent = this.transform;
-		}
-	}
+
+            //log guarda accion
+            lg.write_event("Coloco pelota en : "+matY + " , " + matX);
+
+        }
+    }
 
 	//temp
 	void OnMouseDown(){
@@ -98,8 +107,10 @@ public class ObjectGrid : MonoBehaviour {
 
 	public void childClicked(int X, int Y){
 		if (toolSelected == 2) {
-			occupationMatrix[X,Y] = 0;
-		}
+            //log guarda accion
+            occupationMatrix[X,Y] = 0;
+            lg.write_event("Borro pelota en : " + Y + " , " + X);
+        }
 	}
 
 	public void hideToMeasurer(){
