@@ -14,8 +14,8 @@ public class Output : MonoBehaviour {
 	public float targetResult = 0;
     public float result = 0;
     public string nt = "";
-    public string right_answer = "";
-    public string wrong_answer = "";
+    //public string right_answer = "";
+    //public string wrong_answer = "";
 
     private int spaces;
     private bool dp;
@@ -28,11 +28,19 @@ public class Output : MonoBehaviour {
 
     // Use this for initialization
 
+    public GameObject right_answer;
+    public GameObject wrong_answer;
+    private Change_Layout ra;
+    private Change_Layout wa;
+
     public GameObject log;
     private Log_writer lg;
 
     void Start () {
         lg = log.GetComponent<Log_writer>();
+
+        ra = right_answer.transform.GetComponent<Change_Layout>();
+        wa = wrong_answer.transform.GetComponent<Change_Layout>();
 
         goButton = transform.FindChild("Out");
 		outLabel = transform.FindChild("outputLabel");
@@ -77,7 +85,8 @@ public class Output : MonoBehaviour {
                 //log guarda accion
                 lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
                 lg.write_event("----------------------------------------------------------------");
-                Application.LoadLevel(right_answer);
+                //Application.LoadLevel(right_answer);
+                ra.move();
 			}
 			else{
 				Debug.Log("nope");
@@ -85,7 +94,8 @@ public class Output : MonoBehaviour {
                 //log guarda accion
                 lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
                 lg.write_event("----------------------------------------------------------------");
-                Application.LoadLevel(wrong_answer);
+                //Application.LoadLevel(wrong_answer);
+                wa.move();
             }
 		}
 

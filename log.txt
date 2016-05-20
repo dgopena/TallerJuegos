@@ -1,4 +1,334 @@
 
 00:00:01 --> Inicio de la actividad: Desafio 1
 
-00:00:04 --> Realizo la siguiente operacion : 3 * 3 = 9
+00:00:04 --> Se ingreso 48 como respuesta. La respuesta correcta es: 48
+
+00:00:04 --> ----------------------------------------------------------------
+
+00:00:06 --> Inicio de la actividad: Desafio 2a
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 1 , 7
+
+00:00:03 --> Coloco objeto en : 2 , 7
+
+00:00:03 --> Coloco objeto en : 4 , 7
+
+00:00:04 --> Coloco objeto en : 3 , 7
+
+00:00:04 --> Coloco objeto en : 5 , 6
+
+00:00:05 --> Coloco objeto en : 5 , 7
+
+00:00:06 --> Coloco objeto en : 4 , 6
+
+00:00:06 --> Coloco objeto en : 3 , 6
+
+00:00:07 --> Coloco objeto en : 2 , 6
+
+00:00:07 --> Coloco objeto en : 1 , 6
+
+00:00:07 --> Coloco objeto en : 1 , 5
+
+00:00:08 --> Coloco objeto en : 2 , 5
+
+00:00:08 --> Coloco objeto en : 3 , 5
+
+00:00:08 --> Coloco objeto en : 4 , 5
+
+00:00:09 --> Coloco objeto en : 5 , 5
+
+00:00:09 --> Coloco objeto en : 5 , 4
+
+00:00:10 --> Coloco objeto en : 4 , 4
+
+00:00:10 --> Coloco objeto en : 3 , 4
+
+00:00:10 --> Coloco objeto en : 2 , 4
+
+00:00:11 --> Coloco objeto en : 1 , 4
+
+00:00:12 --> Coloco objeto en : 1 , 3
+
+00:00:12 --> Coloco objeto en : 2 , 3
+
+00:00:12 --> Coloco objeto en : 3 , 3
+
+00:00:13 --> Coloco objeto en : 4 , 3
+
+00:00:13 --> Coloco objeto en : 5 , 3
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 1 , 7
+
+00:00:02 --> Coloco objeto en : 3 , 7
+
+00:00:03 --> Coloco objeto en : 2 , 7
+
+00:00:05 --> Coloco objeto en : 1 , 6
+
+00:00:05 --> Coloco objeto en : 1 , 5
+
+00:00:06 --> Coloco objeto en : 1 , 3
+
+00:00:06 --> Coloco objeto en : 1 , 4
+
+00:00:07 --> Coloco objeto en : 2 , 4
+
+00:00:09 --> Coloco objeto en : 2 , 3
+
+00:00:09 --> Coloco objeto en : 3 , 3
+
+00:00:10 --> Coloco objeto en : 4 , 3
+
+00:00:11 --> Coloco objeto en : 5 , 3
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:01 --> Coloco objeto en : 1 , 7
+
+00:00:02 --> Coloco objeto en : 2 , 7
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 1 , 7
+
+00:00:03 --> Coloco objeto en : 2 , 7
+
+00:00:04 --> Coloco objeto en : 2 , 5
+
+00:00:04 --> Coloco objeto en : 2 , 4
+
+00:00:04 --> Coloco objeto en : 3 , 4
+
+00:00:05 --> Coloco objeto en : 4 , 4
+
+00:00:06 --> Coloco objeto en : 4 , 6
+
+00:00:06 --> Coloco objeto en : 3 , 7
+
+00:00:02 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 1 , 7
+
+00:00:03 --> Coloco objeto en : 2 , 7
+
+00:00:04 --> Coloco objeto en : 3 , 7
+
+00:00:04 --> Coloco objeto en : 4 , 7
+
+00:00:05 --> Coloco objeto en : 5 , 7
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 1 , 7
+
+00:00:02 --> Coloco objeto en : 1 , 6
+
+00:00:03 --> Coloco objeto en : 1 , 5
+
+00:00:03 --> Coloco objeto en : 2 , 5
+
+00:00:04 --> Coloco objeto en : 2 , 6
+
+00:00:05 --> Coloco objeto en : 2 , 7
+
+00:00:05 --> Coloco objeto en : 3 , 7
+
+00:00:06 --> Coloco objeto en : 4 , 7
+
+00:00:06 --> Coloco objeto en : 5 , 7
+
+00:00:07 --> Coloco objeto en : 5 , 6
+
+00:00:08 --> Coloco objeto en : 4 , 6
+
+00:00:08 --> Coloco objeto en : 3 , 6
+
+00:00:08 --> Coloco objeto en : 3 , 5
+
+00:00:09 --> Coloco objeto en : 4 , 5
+
+00:00:09 --> Coloco objeto en : 5 , 5
+
+00:00:10 --> Coloco objeto en : 5 , 4
+
+00:00:10 --> Coloco objeto en : 4 , 4
+
+00:00:11 --> Coloco objeto en : 3 , 4
+
+00:00:11 --> Coloco objeto en : 2 , 4
+
+00:00:12 --> Coloco objeto en : 1 , 4
+
+00:00:12 --> Coloco objeto en : 1 , 3
+
+00:00:13 --> Coloco objeto en : 2 , 3
+
+00:00:13 --> Coloco objeto en : 3 , 3
+
+00:00:13 --> Coloco objeto en : 4 , 3
+
+00:00:14 --> Coloco objeto en : 5 , 3
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 1 , 7
+
+00:00:03 --> Coloco objeto en : 1 , 6
+
+00:00:03 --> Coloco objeto en : 1 , 5
+
+00:00:04 --> Coloco objeto en : 1 , 4
+
+00:00:04 --> Coloco objeto en : 1 , 3
+
+00:00:05 --> Coloco objeto en : 2 , 3
+
+00:00:05 --> Coloco objeto en : 3 , 3
+
+00:00:06 --> Coloco objeto en : 4 , 3
+
+00:00:07 --> Coloco objeto en : 5 , 3
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 1 , 7
+
+00:00:02 --> Coloco objeto en : 1 , 6
+
+00:00:02 --> Coloco objeto en : 1 , 5
+
+00:00:03 --> Coloco objeto en : 1 , 4
+
+00:00:03 --> Coloco objeto en : 1 , 3
+
+00:00:04 --> Coloco objeto en : 2 , 3
+
+00:00:04 --> Coloco objeto en : 3 , 3
+
+00:00:04 --> Coloco objeto en : 4 , 3
+
+00:00:05 --> Coloco objeto en : 5 , 3
+
+00:00:05 --> Coloco objeto en : 4 , 4
+
+00:00:06 --> Coloco objeto en : 3 , 4
+
+00:00:06 --> Coloco objeto en : 2 , 4
+
+00:00:07 --> Coloco objeto en : 5 , 4
+
+00:00:08 --> Coloco objeto en : 5 , 5
+
+00:00:08 --> Coloco objeto en : 4 , 6
+
+00:00:08 --> Coloco objeto en : 3 , 6
+
+00:00:09 --> Coloco objeto en : 2 , 5
+
+00:00:09 --> Coloco objeto en : 3 , 5
+
+00:00:10 --> Coloco objeto en : 4 , 5
+
+00:00:10 --> Coloco objeto en : 2 , 6
+
+00:00:10 --> Coloco objeto en : 2 , 7
+
+00:00:11 --> Coloco objeto en : 3 , 7
+
+00:00:11 --> Coloco objeto en : 4 , 7
+
+00:00:11 --> Coloco objeto en : 5 , 7
+
+00:00:11 --> Coloco objeto en : 5 , 6
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 2 , 6
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:01 --> Coloco objeto en : 3 , 7
+
+00:00:02 --> Coloco objeto en : 2 , 7
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 4 , 5
+
+00:00:03 --> Coloco objeto en : 5 , 5
+
+00:00:04 --> Coloco objeto en : 5 , 4
+
+00:00:04 --> Coloco objeto en : 4 , 4
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 3 , 7
+
+00:00:02 --> Coloco objeto en : 4 , 7
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:02 --> Coloco objeto en : 4 , 6
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:03 --> Coloco objeto en : 2 , 6
+
+00:00:04 --> Coloco objeto en : 3 , 5
+
+00:00:05 --> Coloco objeto en : 2 , 5
+
+00:00:06 --> Coloco objeto en : 4 , 5
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:04 --> Coloco objeto en : 1 , 7
+
+00:00:05 --> Coloco objeto en : 2 , 7
+
+00:00:05 --> Coloco objeto en : 3 , 7
+
+00:00:06 --> Coloco objeto en : 4 , 7
+
+00:00:07 --> Coloco objeto en : 5 , 7
+
+00:00:02 --> Inicio de la actividad: Desafio 3b
+
+00:00:01 --> Inicio de la actividad: Desafio 3b
+
+00:00:05 --> Coloco objeto en : 3 , 3
+
+00:00:06 --> Coloco objeto en : 2 , 3
+
+00:00:07 --> Coloco objeto en : 1 , 3
+
+00:00:09 --> Coloco objeto en : 4 , 3
+
+00:00:09 --> Coloco objeto en : 5 , 3
+
+00:00:11 --> Coloco objeto en : 1 , 7
+
+00:00:11 --> Coloco objeto en : 1 , 6
+
+00:00:11 --> Coloco objeto en : 1 , 5
+
+00:00:12 --> Coloco objeto en : 1 , 4
+
+00:00:01 --> Inicio de la actividad: Desafio 2b
+
+00:00:01 --> Inicio de la actividad: Desafio 2b
+
+00:00:01 --> Inicio de la actividad: Desafio 2b
+
+00:00:01 --> Inicio de la actividad: Desafio 2b
+
+00:00:01 --> Inicio de la actividad: Desafio 3a
+
+00:00:01 --> Inicio de la actividad: Desafio 2b
+
+00:00:01 --> Inicio de la actividad: Desafio 2b
