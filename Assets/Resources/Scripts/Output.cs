@@ -75,16 +75,16 @@ public class Output : MonoBehaviour {
                 //colocar evento de congratz y pasar de layout
 
                 //log guarda accion
-                lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
-                lg.write_event("----------------------------------------------------------------");
+//                lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
+//                lg.write_event("----------------------------------------------------------------");
                 Application.LoadLevel(right_answer);
 			}
 			else{
 				Debug.Log("nope");
 
                 //log guarda accion
-                lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
-                lg.write_event("----------------------------------------------------------------");
+//                lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
+//                lg.write_event("----------------------------------------------------------------");
                 Application.LoadLevel(wrong_answer);
             }
 		}
