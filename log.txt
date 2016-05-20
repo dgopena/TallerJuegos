@@ -1,4 +1,32 @@
 
-00:00:01 --> Inicio de la actividad: Desafio 1
+00:00:05 --> Inicio de la actividad: Desafio 1
 
-00:00:04 --> Realizo la siguiente operacion : 3 * 3 = 9
+00:00:08 --> Realizo la siguiente operacion : 23 * 6 = 138
+
+00:00:14 --> Realizo la siguiente operacion : 48 + 9 = 57
+
+00:00:31 --> Se ingreso 89 como respuesta. La respuesta correcta es: 48
+
+00:00:31 --> ----------------------------------------------------------------
+
+00:00:31 --> Inicio de la actividad: Desafio 2b
+
+00:00:36 --> Coloco objeto en : 2 , 3
+
+00:00:37 --> Coloco objeto en : 2 , 4
+
+00:00:37 --> Coloco objeto en : 4 , 4
+
+00:00:38 --> Coloco objeto en : 4 , 2
+
+00:00:40 --> Se ingreso 47 como respuesta. La respuesta correcta es: 56
+
+00:00:40 --> ----------------------------------------------------------------
+
+00:00:04 --> Inicio de la actividad: Desafio 3a
+
+00:00:08 --> Realizo la siguiente operacion : 78 * 6 = 468
+
+00:00:11 --> Se ingreso 56 como respuesta. La respuesta correcta es: 63
+
+00:00:11 --> ----------------------------------------------------------------
