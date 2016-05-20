@@ -1,6 +1,7 @@
 
-00:00:01 --> Inicio de la actividad: Desafio 1
+00:00:04 --> Inicio de la actividad: Desafio 1
 
+<<<<<<< HEAD
 00:00:04 --> Se ingreso 48 como respuesta. La respuesta correcta es: 48
 
 00:00:04 --> ----------------------------------------------------------------
@@ -332,3 +333,10 @@
 00:00:01 --> Inicio de la actividad: Desafio 2b
 
 00:00:01 --> Inicio de la actividad: Desafio 2b
+=======
+00:00:08 --> Se ingreso 48 como respuesta. La respuesta correcta es: 48
+
+00:00:08 --> ----------------------------------------------------------------
+
+00:00:08 --> Inicio de la actividad: Desafio 2a
+>>>>>>> 4fac352ab32a6b4f7f1003525a86d26cad158539

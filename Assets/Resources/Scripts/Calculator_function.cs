@@ -340,22 +340,34 @@ public class Calculator_function : MonoBehaviour {
         {
             if (op_tp - 1 == 0) {
                 result = num_1 + num_2;
-                lg.write_event("Realizo la siguiente operacion : "+num1 + " + " + num2 + " = " + result);
+//				try{
+//                	lg.write_event("Realizo la siguiente operacion : "+num1 + " + " + num2 + " = " + result);
+//				}
+//				catch(UnityException e){}
                 no_alterable = true;
             }
             else if (op_tp - 1 == 1) {
                 result = num_1 - num_2;
-                lg.write_event("Realizo la siguiente operacion : " + num1 + " - " + num2 + " = " + result);
+//				try{
+//                	lg.write_event("Realizo la siguiente operacion : " + num1 + " - " + num2 + " = " + result);
+//				}
+//				catch(UnityException e){}
                 no_alterable = true;
             }
             else if (op_tp - 1 == 2) {
                 result = num_1 * num_2;
-                lg.write_event("Realizo la siguiente operacion : " + num1 + " * " + num2 + " = " + result);
+//				try{
+//                	lg.write_event("Realizo la siguiente operacion : " + num1 + " * " + num2 + " = " + result);
+//				}
+//				catch(UnityException e){}
                 no_alterable = true;
             }
             else if (op_tp - 1 == 3) {
                 result = num_1 / num_2;
-                lg.write_event("Realizo la siguiente operacion : " + num1 + " / " + num2 + " = " + result);
+//				try{
+//                	lg.write_event("Realizo la siguiente operacion : " + num1 + " / " + num2 + " = " + result);
+//				}
+//				catch(UnityException e){}
                 no_alterable = true;
             }
             this.write_Result();
