@@ -27,7 +27,7 @@ public class Output : MonoBehaviour {
     private string[] state_string;
 
     // Use this for initialization
-
+	public float answerRange = 0f; //Use zero if the answer must be precise
     public GameObject right_answer;
     public GameObject wrong_answer;
     private Change_Layout ra;
@@ -78,7 +78,7 @@ public class Output : MonoBehaviour {
 			nt = "";
 			outLabel.GetComponent<TextMesh> ().text = nt;
 		} else if (buttonType == 0) {
-			if(result == targetResult){
+			if(result == (targetResult + answerRange) || result == (targetResult - answerRange)){
 				Debug.Log("yes very gud");
                 //colocar evento de congratz y pasar de layout
 
