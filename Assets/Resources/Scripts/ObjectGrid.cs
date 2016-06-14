@@ -27,11 +27,11 @@ public class ObjectGrid : MonoBehaviour {
 	public Measurer ruler;
 
     public GameObject log;
-    private Log_writer lg;
+  //  private Log_writer lg;
 
     // Use this for initialization
     void Start () {
-        lg = log.GetComponent<Log_writer>();
+        //lg = log.GetComponent<Log_writer>();
 
         occupationMatrix = new int[lenVer,lenHor];
 		for (int j = 0; j<lenVer; j++) {
@@ -81,7 +81,7 @@ public class ObjectGrid : MonoBehaviour {
 			spawn.transform.parent = this.transform;
 
             //log guarda accion
-            lg.write_event("Coloco objeto en : "+matY + " , " + matX);
+            //lg.write_event("Coloco objeto en : "+matY + " , " + matX);
 
         }
     }
@@ -109,7 +109,7 @@ public class ObjectGrid : MonoBehaviour {
 		if (toolSelected == 2) {
             //log guarda accion
             occupationMatrix[X,Y] = 0;
-            lg.write_event("Borro pelota en : " + Y + " , " + X);
+            //lg.write_event("Borro pelota en : " + Y + " , " + X);
         }
 	}
 

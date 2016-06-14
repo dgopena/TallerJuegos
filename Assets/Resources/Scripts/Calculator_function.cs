@@ -34,10 +34,10 @@ public class Calculator_function : MonoBehaviour {
     private TextMesh r_writer;
 
     public GameObject log;
-    private Log_writer lg;
+//    private Log_writer lg;
 
     void Start() {
-        lg = log.GetComponent<Log_writer>();
+        //lg = log.GetComponent<Log_writer>();
 
         o_writer = transform.GetChild(20).GetChild(0).GetComponent<TextMesh>(); 
         r_writer = transform.GetChild(20).GetChild(1).GetComponent<TextMesh>();

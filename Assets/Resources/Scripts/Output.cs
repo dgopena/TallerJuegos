@@ -34,10 +34,10 @@ public class Output : MonoBehaviour {
     private Change_Layout wa;
 
     public GameObject log;
-    private Log_writer lg;
+   // private Log_writer lg;
 
     void Start () {
-        lg = log.GetComponent<Log_writer>();
+        //lg = log.GetComponent<Log_writer>();
 
         ra = right_answer.transform.GetComponent<Change_Layout>();
         wa = wrong_answer.transform.GetComponent<Change_Layout>();
@@ -79,7 +79,7 @@ public class Output : MonoBehaviour {
 			outLabel.GetComponent<TextMesh> ().text = nt;
 		} else if (buttonType == 0) {
 			if(result == (targetResult + answerRange) || result == (targetResult - answerRange)){
-				Debug.Log("yes very gud");
+				//Debug.Log("yes very gud");
                 //colocar evento de congratz y pasar de layout
 
                 //log guarda accion
@@ -91,7 +91,7 @@ public class Output : MonoBehaviour {
 				ra.move();
 			}
 			else{
-				Debug.Log("nope");
+				//Debug.Log("nope");
 
                 //log guarda accion
                 //Application.LoadLevel(wrong_answer);
