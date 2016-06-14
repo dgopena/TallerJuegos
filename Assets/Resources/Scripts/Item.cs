@@ -8,8 +8,10 @@ public class Item : MonoBehaviour {
 	private int matX = 0;
 	private int matY = 0;
 
+    private TextMesh dbg;
+
 	void Start () {
-	
+        dbg = ObjectGrid.findDebugger();
 	}
 	
 	// Update is called once per frame
@@ -30,7 +32,9 @@ public class Item : MonoBehaviour {
 		ObjectGrid par = transform.parent.GetComponent<ObjectGrid> ();
 		par.childClicked (matX, matY);
 		if (par.getToolSelected () == 2) {
-			Destroy(this.gameObject);
+
+            dbg.text = "Destroy call.";
+            Destroy(this.gameObject);
 		}
 	}
 }

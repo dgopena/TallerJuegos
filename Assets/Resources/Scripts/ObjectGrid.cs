@@ -19,6 +19,8 @@ public class ObjectGrid : MonoBehaviour {
 	public int objectNum = 9;
 	public string itemName = "Ball";
 
+    private TextMesh dbg;
+
 	private int toolSelected = 0; //default with add object
 	//0 = add
 	//1 = ruler
@@ -45,6 +47,8 @@ public class ObjectGrid : MonoBehaviour {
 		for (int i = 0; i<objectNum; i++) {
 			objectGraphic[i] = Resources.Load<Sprite>("Sprites/"+itemName + i) as Sprite;
 		}
+
+        dbg = findDebugger();
 	}
 	
 	// Update is called once per frame
@@ -109,6 +113,8 @@ public class ObjectGrid : MonoBehaviour {
 		if (toolSelected == 2) {
             //log guarda accion
             occupationMatrix[X,Y] = 0;
+
+            dbg.text = "Erase call.";
             lg.write_event("Borro pelota en : " + Y + " , " + X);
         }
 	}
@@ -120,4 +126,24 @@ public class ObjectGrid : MonoBehaviour {
 	public void showToMeasurer(){
 		ruler.showLine ();
 	}
+
+    public static TextMesh findDebugger() {
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("Debug");
+        GameObject debugger = null;
+        TextMesh ret = null;
+        foreach(GameObject g in targets)
+        {
+            if (g.name == "Debugger") {
+                Debug.Log("Found debugger");
+                debugger = g;
+                break;
+            }
+        }
+        if(debugger != null)
+        {
+            ret = debugger.transform.FindChild("Label").GetComponent<TextMesh>();
+            ret.text = "Debugger linked";
+        }
+        return ret;
+    }
 }
