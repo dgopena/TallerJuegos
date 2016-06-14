@@ -19,8 +19,6 @@ public class ObjectGrid : MonoBehaviour {
 	public int objectNum = 9;
 	public string itemName = "Ball";
 
-    private TextMesh dbg;
-
 	private int toolSelected = 0; //default with add object
 	//0 = add
 	//1 = ruler
@@ -29,11 +27,11 @@ public class ObjectGrid : MonoBehaviour {
 	public Measurer ruler;
 
     public GameObject log;
-    private Log_writer lg;
+  //  private Log_writer lg;
 
     // Use this for initialization
     void Start () {
-        lg = log.GetComponent<Log_writer>();
+        //lg = log.GetComponent<Log_writer>();
 
         occupationMatrix = new int[lenVer,lenHor];
 		for (int j = 0; j<lenVer; j++) {
@@ -47,8 +45,6 @@ public class ObjectGrid : MonoBehaviour {
 		for (int i = 0; i<objectNum; i++) {
 			objectGraphic[i] = Resources.Load<Sprite>("Sprites/"+itemName + i) as Sprite;
 		}
-
-        dbg = findDebugger();
 	}
 	
 	// Update is called once per frame
@@ -85,7 +81,7 @@ public class ObjectGrid : MonoBehaviour {
 			spawn.transform.parent = this.transform;
 
             //log guarda accion
-            lg.write_event("Coloco objeto en : "+matY + " , " + matX);
+            //lg.write_event("Coloco objeto en : "+matY + " , " + matX);
 
         }
     }
@@ -113,9 +109,7 @@ public class ObjectGrid : MonoBehaviour {
 		if (toolSelected == 2) {
             //log guarda accion
             occupationMatrix[X,Y] = 0;
-
-            dbg.text = "Erase call.";
-            lg.write_event("Borro pelota en : " + Y + " , " + X);
+            //lg.write_event("Borro pelota en : " + Y + " , " + X);
         }
 	}
 
@@ -126,24 +120,4 @@ public class ObjectGrid : MonoBehaviour {
 	public void showToMeasurer(){
 		ruler.showLine ();
 	}
-
-    public static TextMesh findDebugger() {
-        GameObject[] targets = GameObject.FindGameObjectsWithTag("Debug");
-        GameObject debugger = null;
-        TextMesh ret = null;
-        foreach(GameObject g in targets)
-        {
-            if (g.name == "Debugger") {
-                Debug.Log("Found debugger");
-                debugger = g;
-                break;
-            }
-        }
-        if(debugger != null)
-        {
-            ret = debugger.transform.FindChild("Label").GetComponent<TextMesh>();
-            ret.text = "Debugger linked";
-        }
-        return ret;
-    }
 }

@@ -35,12 +35,12 @@ public class Arranger : MonoBehaviour {
 	}
 
 	public void orderTroops(int groupNum){
-		Debug.Log ("Arranging by " + groupNum);
+		//Debug.Log ("Arranging by " + groupNum);
 		int groupTotal = (int) (amount / groupNum);
 		if ((amount % groupNum) > 0f) {
 			groupTotal++;
 		}
-		Debug.Log (groupTotal);
+		//Debug.Log (groupTotal);
 		for (int i = 0; i<groupTotal; i++) {
 			//el resto mandarlo a la banca
 			Vector3 point = new Vector3(Random.Range(minHor,maxHor), Random.Range(minVer,maxVer),-2f);
