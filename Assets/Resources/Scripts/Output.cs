@@ -68,6 +68,7 @@ public class Output : MonoBehaviour {
 	}
 
 	public void buttonCall(int buttonType){
+        Debug.Log(outPanel);
 		if (buttonType == 2) {
 			outPanel.position += Vector3.down * 8f;
 			active = true;

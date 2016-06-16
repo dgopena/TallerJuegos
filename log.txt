@@ -1,18 +1,2 @@
 
-00:00:04 --> Inicio de la actividad: Desafio 1
-
-00:00:07 --> Coloco objeto en : 0 , 5
-
-00:00:08 --> Coloco objeto en : 2 , 6
-
-00:00:08 --> Coloco objeto en : 1 , 7
-
-00:00:09 --> Coloco objeto en : 2 , 5
-
-00:00:10 --> Borro pelota en : 0 , 5
-
-00:00:11 --> Borro pelota en : 2 , 5
-
-00:00:12 --> Borro pelota en : 2 , 6
-
-00:00:13 --> Borro pelota en : 1 , 7
+00:01:29 --> Inicio de la actividad: Desafio 1
