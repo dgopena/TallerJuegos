@@ -55,6 +55,7 @@ public class Relation : MonoBehaviour {
 				} else if (relationID == 2 && other.relationID == 3) {
 					rL.text = "" + relation23;
 				}
+                Log_writer.addLine("Probo relacion entre " + relationID + " y " + other.relationID);
 			}
 			else if (transform.name == "Box2") {
 				if (relationID == 2 && other.relationID == 1) {

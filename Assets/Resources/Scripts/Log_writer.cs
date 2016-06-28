@@ -16,12 +16,30 @@ public class Log_writer : MonoBehaviour {
     public string ua = "";
     public string name_activity = "";
 
+    public bool pc = false;
+
+    //mobile log data
+    private int nowID = 0;
+
 	// Use this for initialization
 	void Start () {
 
-        
-        sw = new StreamWriter(txtdirection, continuar_log, Encoding.ASCII);
-        write_event("Inicio de la actividad: " + name_activity);
+        if (pc)
+        {
+            sw = new StreamWriter(txtdirection, continuar_log, Encoding.ASCII);
+            write_event("Inicio de la actividad: " + name_activity);
+        }
+        else
+        {
+            /*
+            int lastID = PlayerPrefs.GetInt("lastID");
+            nowID = lastID + 1;
+            PlayerPrefs.SetInt("lastID", nowID);
+            string log = PlayerPrefs.GetString("Log");
+            log += "\n Log #" + nowID;
+            PlayerPrefs.SetString("Log", log);
+            */
+        }
     }
 	
 	// Update is called once per frame
@@ -53,5 +71,26 @@ public class Log_writer : MonoBehaviour {
         if (seconds < 10) { time_in_minutes = time_in_minutes + ":0" + seconds; }
         else { time_in_minutes = time_in_minutes + ":" + seconds; }
         return time_in_minutes;
+    }
+
+    public static void clearLog() //solo gatillarlo si se pretende borrar todo el log
+    {
+        PlayerPrefs.SetString("Log", "");
+    }
+
+    public static void addLine(string addition)
+    {
+        string log = PlayerPrefs.GetString("Log");
+        Debug.Log(log);
+        Debug.Log(addition);
+        log += "\n" + addition;
+        Debug.Log(log);
+        PlayerPrefs.SetString("Log", log);
+    }
+
+    public static void showLog()
+    {
+        string log = PlayerPrefs.GetString("Log");
+        Debug.Log(log);
     }
 }

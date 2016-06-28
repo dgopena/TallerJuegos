@@ -28,12 +28,10 @@ public class ObjectGrid : MonoBehaviour {
 
 	public Measurer ruler;
 
-    public GameObject log;
-  //  private Log_writer lg;
+    private Log_writer lg;
 
     // Use this for initialization
     void Start () {
-        //lg = log.GetComponent<Log_writer>();
 
         occupationMatrix = new int[lenVer,lenHor];
 		for (int j = 0; j<lenVer; j++) {
@@ -49,6 +47,7 @@ public class ObjectGrid : MonoBehaviour {
 		}
 
         dbg = findDebugger();
+        lg = findLogger();
 	}
 	
 	// Update is called once per frame
@@ -85,7 +84,7 @@ public class ObjectGrid : MonoBehaviour {
 			spawn.transform.parent = this.transform;
 
             //log guarda accion
-            //lg.write_event("Coloco objeto en : "+matY + " , " + matX);
+            Log_writer.addLine("Coloco objeto en : "+matY + " , " + matX);
 
         }
     }
@@ -113,7 +112,7 @@ public class ObjectGrid : MonoBehaviour {
 		if (toolSelected == 2) {
             //log guarda accion
             occupationMatrix[X,Y] = 0;
-            //lg.write_event("Borro pelota en : " + Y + " , " + X);
+            Log_writer.addLine("Borro pelota en : " + Y + " , " + X);
         }
 	}
 
@@ -143,6 +142,27 @@ public class ObjectGrid : MonoBehaviour {
         {
             ret = debugger.transform.FindChild("Label").GetComponent<TextMesh>();
             ret.text = "Debugger linked";
+        }
+        return ret;
+    }
+
+    public static Log_writer findLogger()
+    {
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("Logger");
+        GameObject logger = null;
+        Log_writer ret = null;
+        foreach (GameObject g in targets)
+        {
+            if (g.name == "Log")
+            {
+                Debug.Log("Found logger");
+                logger = g;
+                break;
+            }
+        }
+        if (logger != null)
+        {
+            ret = logger.transform.GetComponent<Log_writer>();
         }
         return ret;
     }

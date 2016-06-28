@@ -35,7 +35,8 @@ public class Arranger : MonoBehaviour {
 	}
 
 	public void orderTroops(int groupNum){
-		//Debug.Log ("Arranging by " + groupNum);
+        //Debug.Log ("Arranging by " + groupNum);
+        Log_writer.addLine("Ordeno items en grupos de " + groupNum);
 		int groupTotal = (int) (amount / groupNum);
 		if ((amount % groupNum) > 0f) {
 			groupTotal++;

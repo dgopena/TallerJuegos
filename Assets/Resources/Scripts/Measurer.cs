@@ -91,7 +91,7 @@ public class Measurer : MonoBehaviour {
 					lineLabel.position = new Vector3(labelX + 2f, midPoint.y, -1.3f);
 					lineLabel.GetComponent<TextMesh>().text = (Mathf.Round((distance*3.75f) * 100f)/100f) + " cms";
 
-                    //lg.write_event("Uso la regla para medir desde (" + lastPoint.x + "," + lastPoint.y + ") hasta (" + newPoint.x + "," + newPoint.y + ") y obtubo : " + lineLabel.GetComponent<TextMesh>().text);
+                    Log_writer.addLine("Uso la regla para medir desde (" + lastPoint.x + "," + lastPoint.y + ") \nhasta (" + newPoint.x + "," + newPoint.y + ") y obtubo : " + lineLabel.GetComponent<TextMesh>().text);
 
 					lastPoint = newPoint;
 				}

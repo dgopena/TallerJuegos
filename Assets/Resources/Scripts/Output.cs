@@ -27,6 +27,8 @@ public class Output : MonoBehaviour {
     private string[] state_string;
 
     // Use this for initialization
+    public bool approximationQuestion = false;
+    public int approxQuestionNumber = 0;
 	public float answerRange = 0f; //Use zero if the answer must be precise
     public GameObject right_answer;
     public GameObject wrong_answer;
@@ -60,6 +62,10 @@ public class Output : MonoBehaviour {
         state_dn = new int[12];
         state_string = new string[13];
 
+        if (approximationQuestion)
+        {
+            targetResult = PlayerPrefs.GetFloat("4." + approxQuestionNumber);
+        }
 	}
 	
 	// Update is called once per frame
@@ -70,36 +76,40 @@ public class Output : MonoBehaviour {
 	public void buttonCall(int buttonType){
         Debug.Log(outPanel);
 		if (buttonType == 2) {
-			outPanel.position += Vector3.down * 8f;
+			outPanel.position += Vector3.down * 20f;
 			active = true;
 		} else if (buttonType == 1) {
-			outPanel.position += Vector3.up * 8f;
+			outPanel.position += Vector3.up * 20f;
 			active = false;
 			result = 0;
 			nt = "";
 			outLabel.GetComponent<TextMesh> ().text = nt;
 		} else if (buttonType == 0) {
-			if(result == (targetResult + answerRange) || result == (targetResult - answerRange)){
+
+			if(result <= (targetResult + answerRange) || result >= (targetResult - answerRange)){
 				//Debug.Log("yes very gud");
                 //colocar evento de congratz y pasar de layout
 
                 //log guarda accion
                 //Application.LoadLevel(right_answer);
-//                lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
-//                lg.write_event("----------------------------------------------------------------");
+                Log_writer.addLine("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
+                Log_writer.addLine("----------------------------------------------------------------");
+                Log_writer.showLog();
 //                Application.LoadLevel(right_answer);
 				
 				ra.move();
 			}
 			else{
-				//Debug.Log("nope");
-
+                //Debug.Log("nope");
+                Log_writer.addLine("Incorrecto. Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
+                Log_writer.addLine("----------------------------------------------------------------");
+                Log_writer.showLog();
                 //log guarda accion
                 //Application.LoadLevel(wrong_answer);
-//                lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
-//                lg.write_event("----------------------------------------------------------------");
-//                Application.LoadLevel(wrong_answer);
-				wa.move();
+                //                lg.write_event("Se ingreso " + result + " como respuesta. La respuesta correcta es: " + targetResult);
+                //                lg.write_event("----------------------------------------------------------------");
+                //                Application.LoadLevel(wrong_answer);
+                wa.move();
             }
 		}
 

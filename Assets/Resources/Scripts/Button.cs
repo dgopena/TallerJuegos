@@ -9,7 +9,8 @@ public class Button : MonoBehaviour {
 	private Sprite[] outputGraphic;
 	private bool buttonActive = false; //starts inactive
 
-	public bool isOutputType = false; //2 = eliminate output panel, 0 = submit, 1 = cancel
+	public bool isOutputType = false; //2 = eliminate output panel, 0 = submit, 1 = cancel, 4 - changeToScene
+    public string scene = "";
 	
 	private SpriteRenderer rend;
 	// Use this for initialization
@@ -42,37 +43,52 @@ public class Button : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-		if (!isOutputType) {
-			if (!buttonActive) {
-				rend.sprite = buttonGraphic [buttonType * 2 + 1];
-				buttonActive = true;
-				if (buttonType == 1) {
-					this.transform.parent.GetComponent<ObjectGrid> ().showToMeasurer ();
-				}
-				disableBrothers ();
-				alertParent ();
-			}
-		} else {
-			if(buttonType != 2 && buttonType != 3){
-				rend.sprite = outputGraphic [buttonType * 2 + 1];
-			}
-			else if(buttonType == 3){
-				Animator anim = this.GetComponent<Animator>();
-				if(anim.GetBool("open")){
-					anim.SetBool("open", false);
-				}
-				else{
-					anim.SetBool("open", true);
-				}
-			}
-			if(buttonType!=3){
+        if (!isOutputType) {
+            if (!buttonActive) {
+                rend.sprite = buttonGraphic[buttonType * 2 + 1];
+                buttonActive = true;
+                if (buttonType == 1) {
+                    this.transform.parent.GetComponent<ObjectGrid>().showToMeasurer();
+                }
+                disableBrothers();
+                alertParent();
+            }
+        } else {
+            bool noTypes = ((buttonType != 2) && (buttonType != 3)) && (buttonType != 4);
+            if (noTypes) {
+                rend.sprite = outputGraphic[buttonType * 2 + 1];
+            }
+            else if (buttonType == 3) {
+                Animator anim = this.GetComponent<Animator>();
+                if (anim.GetBool("open")) {
+                    anim.SetBool("open", false);
+                }
+                else {
+                    anim.SetBool("open", true);
+                }
+            }
+            else if (buttonType == 4)
+            {
+                if (scene == "Layout 1")
+                {
+                    //inicio de actividades
+                    int lastID = PlayerPrefs.GetInt("lastID");
+                    int nowID = lastID + 1;
+                    PlayerPrefs.SetInt("lastID", nowID);
+                    string log = PlayerPrefs.GetString("Log");
+                    log += "\n Inicio de actividades> Log #" + nowID;
+                    PlayerPrefs.SetString("Log", log);
+                }
+                Application.LoadLevel(scene);
+            }
+			if(buttonType!=3 && buttonType!=4){
 				transform.parent.GetComponent<Output>().buttonCall(buttonType);
 			}
 		}
 	}
 
 	void OnMouseUp(){
-		if (isOutputType && (buttonType!= 2 && buttonType!= 3)) {
+		if (isOutputType && ((buttonType!= 2 && buttonType!= 3) && buttonType != 4)) {
 			rend.sprite = outputGraphic [buttonType * 2];
 		}
 	}
