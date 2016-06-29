@@ -73,7 +73,7 @@ public class MenuScript : MonoBehaviour {
                 }
                 else
                 {
-                    transform.FindChild("Label").GetComponent<TextMesh>().text = "Sure?";
+                    transform.FindChild("Label").GetComponent<TextMesh>().text = "Seguro?";
                 }
                 clickCount++;
 
@@ -100,6 +100,10 @@ public class MenuScript : MonoBehaviour {
             else if(buttonID == 4)
             {
                 Application.LoadLevel("Menu.1");
+            }
+            else if (buttonID == 5)
+            {
+                Application.LoadLevel("Menu.3");
             }
         }
     }
