@@ -15,6 +15,8 @@ public class TimeScript : MonoBehaviour {
     private float timeCooldown = 0f;
     private int objectCount = 0;
 
+    private bool started = false;
+
 	// Use this for initialization
 	void Start () {
         timeCooldown = timeSkip;
@@ -23,30 +25,38 @@ public class TimeScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(ssCooldown > 0f)
+        if (started)
         {
-            ssCooldown -= Time.deltaTime;
-        }
-        else
-        {
-            secondState.enabled = false;
-            firstState.enabled = true;
-        }
+            if (ssCooldown > 0f)
+            {
+                ssCooldown -= Time.deltaTime;
+            }
+            else
+            {
+                secondState.enabled = false;
+                firstState.enabled = true;
+            }
 
-        if(timeCooldown < 0f && objectCount<objectLimit)
-        {
-            GameObject ne = (GameObject)Instantiate(item);
-            ne.transform.position = transform.position + 1.2f*Vector3.down;
-            ne.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
-            ssCooldown = ssRate;
-            secondState.enabled = true;
-            firstState.enabled = false;
-            timeCooldown = timeSkip;
-            objectCount++;
+            if (timeCooldown < 0f && objectCount < objectLimit)
+            {
+                GameObject ne = (GameObject)Instantiate(item);
+                ne.transform.position = transform.position + 1.2f * Vector3.down;
+                ne.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
+                ssCooldown = ssRate;
+                secondState.enabled = true;
+                firstState.enabled = false;
+                timeCooldown = timeSkip;
+                objectCount++;
+            }
+            else
+            {
+                timeCooldown -= Time.deltaTime;
+            }
         }
         else
         {
-            timeCooldown -= Time.deltaTime;
+            cronometertime tim = GameObject.FindGameObjectWithTag("Timer").GetComponent<cronometertime>();
+            if (tim.running) { started = true; }
         }
 	}
 }
