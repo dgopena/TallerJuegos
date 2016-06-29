@@ -26,8 +26,10 @@ public class cronometer_button : MonoBehaviour {
 		rend.sprite = this.ButtonPressed;
 		if (is_stop) {
 			ct.stop ();
+            Log_writer.addLine("Detuvo el cronometro.");
 		} else {
-			ct.toggle_pause_start ();
+            Log_writer.addLine("Pausa/comienzo del cronometro.");
+            ct.toggle_pause_start ();
 		}
 	}
 

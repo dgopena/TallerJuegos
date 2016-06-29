@@ -47,6 +47,10 @@ public class TimeScript : MonoBehaviour {
                 firstState.enabled = false;
                 timeCooldown = timeSkip;
                 objectCount++;
+                if(objectCount == objectLimit)
+                {
+                    Log_writer.addLine("Se llego al limite de objetos en este juego de tiempo. (item 3)");
+                }
             }
             else
             {
