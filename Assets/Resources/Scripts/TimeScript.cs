@@ -8,6 +8,7 @@ public class TimeScript : MonoBehaviour {
     public int objectLimit = 30;
     public Object item;
 
+    private SpriteRenderer firstState;
     private float ssCooldown = 0f;
     private float ssRate = 1f;
 
@@ -17,6 +18,7 @@ public class TimeScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         timeCooldown = timeSkip;
+        firstState = transform.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,7 @@ public class TimeScript : MonoBehaviour {
         else
         {
             secondState.enabled = false;
+            firstState.enabled = true;
         }
 
         if(timeCooldown < 0f && objectCount<objectLimit)
@@ -37,6 +40,7 @@ public class TimeScript : MonoBehaviour {
             ne.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
             ssCooldown = ssRate;
             secondState.enabled = true;
+            firstState.enabled = false;
             timeCooldown = timeSkip;
             objectCount++;
         }

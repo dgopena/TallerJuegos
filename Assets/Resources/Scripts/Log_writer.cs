@@ -81,10 +81,7 @@ public class Log_writer : MonoBehaviour {
     public static void addLine(string addition)
     {
         string log = PlayerPrefs.GetString("Log");
-        Debug.Log(log);
-        Debug.Log(addition);
         log += "\n" + addition;
-        Debug.Log(log);
         PlayerPrefs.SetString("Log", log);
     }
 

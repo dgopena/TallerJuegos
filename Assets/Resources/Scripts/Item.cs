@@ -33,7 +33,7 @@ public class Item : MonoBehaviour {
 		par.childClicked (matX, matY);
 		if (par.getToolSelected () == 2) {
 
-            dbg.text = "Destroy call.";
+            //dbg.text = "Destroy call.";
             Destroy(this.gameObject);
 		}
 	}

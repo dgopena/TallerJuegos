@@ -59,13 +59,7 @@ public class Button : MonoBehaviour {
                 rend.sprite = outputGraphic[buttonType * 2 + 1];
             }
             else if (buttonType == 3) {
-                Animator anim = this.GetComponent<Animator>();
-                if (anim.GetBool("open")) {
-                    anim.SetBool("open", false);
-                }
-                else {
-                    anim.SetBool("open", true);
-                }
+                //unused
             }
             else if (buttonType == 4)
             {
