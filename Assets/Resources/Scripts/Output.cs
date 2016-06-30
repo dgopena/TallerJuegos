@@ -86,7 +86,7 @@ public class Output : MonoBehaviour {
 			outLabel.GetComponent<TextMesh> ().text = nt;
 		} else if (buttonType == 0) {
 
-			if(result <= (targetResult + answerRange) || result >= (targetResult - answerRange)){
+			if(result <= (targetResult + answerRange) && result >= (targetResult - answerRange)){
 				//Debug.Log("yes very gud");
                 //colocar evento de congratz y pasar de layout
 
