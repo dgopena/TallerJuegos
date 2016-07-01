@@ -11,6 +11,9 @@ public class Button : MonoBehaviour {
 
 	public bool isOutputType = false; //2 = eliminate output panel, 0 = submit, 1 = cancel, 4 - changeToScene
     public string scene = "";
+
+    public Sprite buttonUnpressed;
+    public Sprite buttonPressed;
 	
 	private SpriteRenderer rend;
 	// Use this for initialization
@@ -45,7 +48,7 @@ public class Button : MonoBehaviour {
 	void OnMouseDown(){
         if (!isOutputType) {
             if (!buttonActive) {
-                rend.sprite = buttonGraphic[buttonType * 2 + 1];
+                rend.sprite = buttonPressed;
                 buttonActive = true;
                 if (buttonType == 1) {
                     this.transform.parent.GetComponent<ObjectGrid>().showToMeasurer();
@@ -99,7 +102,7 @@ public class Button : MonoBehaviour {
 	}
 
 	public void deactivate(){
-		rend.sprite = buttonGraphic[buttonType*2];
+        rend.sprite = buttonUnpressed;
 		buttonActive = false;
 		if (buttonType == 1) {
 			this.transform.parent.GetComponent<ObjectGrid>().hideToMeasurer();
@@ -107,7 +110,7 @@ public class Button : MonoBehaviour {
 	}
 
 	public void activate(){
-		rend.sprite = buttonGraphic[buttonType*2 + 1];
+        rend.sprite = buttonPressed;
 		buttonActive = true;
 		alertParent ();
 		if (buttonType == 1) {
